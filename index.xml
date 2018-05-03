@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>&amp;copy; 2018 江湖夜雨十年灯</copyright>
-    <lastBuildDate>Tue, 16 May 2017 15:11:55 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 24 Jun 2017 20:50:41 +0700</lastBuildDate>
     
 	<atom:link href="https://xiaker.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>License</title>
+      <link>https://xiaker.org/about/license/</link>
+      <pubDate>Sat, 24 Jun 2017 20:50:41 +0700</pubDate>
+      
+      <guid>https://xiaker.org/about/license/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>如何正确设置docker alpine镜像的时区</title>
