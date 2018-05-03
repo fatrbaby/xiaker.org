@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,11 @@
 不得不说，docker和openresty都是好东西。openresty的官方镜像默认版本使用的基础镜像是alpine，不得不说alpine也是个好东西。在其他如ubuntu、centos镜像动辄几百M的体积下，只有5M的alpine简直是一股清流。对于我这种128SSD用户来说简直是福音。虽说docker的image是分层的，可以共用某些层，所使用的空间不一定有显示的那么大，但见到只有一位数的显示，心里总会踏实一些。
 当然alpine在维持体积小的情况下，必然牺牲一些东西。比如，他就不带其他的时区文件，在默认的情况下，你是没办法改时区的。在踩到这个坑的时候，我还是找资料踏了出来。
 Dockerfile里加上这段:
-RUN apk add -U tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  ">
+RUN apk add -U tzdata &amp;&amp; \  cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime">
 
 
+		
+		<link rel="shortcut icon" href="/favicon.ico">
 		
 		
 		
@@ -26,19 +28,19 @@ RUN apk add -U tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/loc
 		
 
 		<style>
-	a { color: ; }
+	a { color: #ff8181; }
 	blockquote {
-		border-left-color: ;
-		border-right-color: ; }
+		border-left-color: #ff8181;
+		border-right-color: #ff8181; }
 	.bar a:hover {
-		color: ;
+		color: #ff8181;
 		text-decoration: none; }
 	.sep {
 		margin-top: 2rem;
 		margin-bottom: 1rem;
 		margin-left:0;
 		width: 24rem;
-		border-top: 2px solid ; }
+		border-top: 2px solid #ff8181; }
 </style>
 
 	</head>
@@ -78,11 +80,8 @@ RUN apk add -U tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/loc
 <p>当然alpine在维持体积小的情况下，必然牺牲一些东西。比如，他就不带其他的时区文件，在默认的情况下，你是没办法改时区的。在踩到这个坑的时候，我还是找资料踏了出来。</p>
 
 <p>Dockerfile里加上这段:</p>
-
-<pre><code class="language-shell"> RUN apk add -U tzdata &amp;&amp; \
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"> RUN apk add -U tzdata <span class="o">&amp;&amp;</span> <span class="se">\
+</span><span class="se"></span>    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</code></pre></div>
 	<nav class="no-print post-nav">
 	
 		<a class="prev-post" href="https://xiaker.org/post/xue-jian-tu-long/">
@@ -100,21 +99,29 @@ RUN apk add -U tzdata &amp;&amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/loc
 		<footer class="container no-print">
 			<div class="u-footer">
 				
+<a href="mailto:fatrbaby@xiaker.org"><img class="icon-social" src="/img/email.svg" alt="Email Me!"/></a>
+
+
+<a href="https://github.com/fatrbaby/"><img class="icon-social" src="/img/github.svg" alt="Github"/></a>
 
 
 <a href="https://xiaker.org/index.xml" target="_blank"><img class="icon-social" src="/img/feed.svg" alt="Feed"></a>
 
 				<p>
 					
-					Theme used: <a href="https://github.com/yursan9/manis-hugo-theme">Manis</a><br>
+					主题驱动: <a href="https://github.com/yursan9/manis-hugo-theme">Manis</a><br>
 					
 					
+					&copy; 2018 江湖夜雨十年灯
+					
+					
+					| <a href="/about/license">License</a>
 					
 				</p>
 				
 				<a href="#brand">
 					<img class="icon-text" src="/img/toup.svg" alt="To Up"/>
-					<span>Back to Up</span>
+					<span>回顶部</span>
 				</a>
 				
 			</div>

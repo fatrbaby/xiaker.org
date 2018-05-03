@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 江湖夜雨十年灯</title>
+    <title>Post on 江湖夜雨十年灯</title>
     <link>https://xiaker.org/post/</link>
-    <description>Recent content in Posts on 江湖夜雨十年灯</description>
+    <description>Recent content in Post on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <copyright>&amp;copy; 2018 江湖夜雨十年灯</copyright>
     <lastBuildDate>Tue, 16 May 2017 15:11:55 +0800</lastBuildDate>
     
 	<atom:link href="https://xiaker.org/post/index.xml" rel="self" type="application/rss+xml" />
@@ -21,7 +22,7 @@
 不得不说，docker和openresty都是好东西。openresty的官方镜像默认版本使用的基础镜像是alpine，不得不说alpine也是个好东西。在其他如ubuntu、centos镜像动辄几百M的体积下，只有5M的alpine简直是一股清流。对于我这种128SSD用户来说简直是福音。虽说docker的image是分层的，可以共用某些层，所使用的空间不一定有显示的那么大，但见到只有一位数的显示，心里总会踏实一些。
 当然alpine在维持体积小的情况下，必然牺牲一些东西。比如，他就不带其他的时区文件，在默认的情况下，你是没办法改时区的。在踩到这个坑的时候，我还是找资料踏了出来。
 Dockerfile里加上这段:
-RUN apk add -U tzdata &amp;amp;&amp;amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  </description>
+RUN apk add -U tzdata &amp;amp;&amp;amp; \  cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</description>
     </item>
     
     <item>
