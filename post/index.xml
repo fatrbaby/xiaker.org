@@ -6,10 +6,23 @@
     <description>Recent content in Posts on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 07 Oct 2014 15:07:18 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 16 May 2017 15:11:55 +0800</lastBuildDate>
     
 	<atom:link href="https://xiaker.org/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何正确设置docker alpine镜像的时区</title>
+      <link>https://xiaker.org/post/set-alpine-timezone-right-way/</link>
+      <pubDate>Tue, 16 May 2017 15:11:55 +0800</pubDate>
+      
+      <guid>https://xiaker.org/post/set-alpine-timezone-right-way/</guid>
+      <description>前段时间构建一个基于oprenresty的项目，使用了openresty官方的docker镜像。
+不得不说，docker和openresty都是好东西。openresty的官方镜像默认版本使用的基础镜像是alpine，不得不说alpine也是个好东西。在其他如ubuntu、centos镜像动辄几百M的体积下，只有5M的alpine简直是一股清流。对于我这种128SSD用户来说简直是福音。虽说docker的image是分层的，可以共用某些层，所使用的空间不一定有显示的那么大，但见到只有一位数的显示，心里总会踏实一些。
+当然alpine在维持体积小的情况下，必然牺牲一些东西。比如，他就不带其他的时区文件，在默认的情况下，你是没办法改时区的。在踩到这个坑的时候，我还是找资料踏了出来。
+Dockerfile里加上这段:
+RUN apk add -U tzdata &amp;amp;&amp;amp; \ cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  </description>
+    </item>
     
     <item>
       <title>《血剑屠龙》—— 那些我与校花的故事</title>
