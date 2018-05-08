@@ -3,44 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://xiaker.org/about/license/</loc>
+    <loc>http://xiaker.org/about/</loc>
+    <lastmod>2018-05-03T15:57:12+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xiaker.org/about/license/</loc>
     <lastmod>2017-06-24T20:50:41+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://xiaker.org/post/set-alpine-timezone-right-way/</loc>
+    <loc>http://xiaker.org/post/set-alpine-timezone-right-way/</loc>
     <lastmod>2017-05-16T15:11:55+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://xiaker.org/post/xue-jian-tu-long/</loc>
+    <loc>http://xiaker.org/post/xue-jian-tu-long/</loc>
     <lastmod>2014-10-07T15:07:18+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://xiaker.org/post/start-from-here/</loc>
+    <loc>http://xiaker.org/post/start-from-here/</loc>
     <lastmod>2014-09-25T14:35:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://xiaker.org/about/</loc>
-    <lastmod>2017-06-24T20:50:41+07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://xiaker.org/post/</loc>
+    <loc>http://xiaker.org/post/</loc>
     <lastmod>2017-05-16T15:11:55+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://xiaker.org/tags/</loc>
+    <loc>http://xiaker.org/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://xiaker.org/</loc>
+    <loc>http://xiaker.org/</loc>
     <lastmod>2017-06-24T20:50:41+07:00</lastmod>
     <priority>0</priority>
   </url>

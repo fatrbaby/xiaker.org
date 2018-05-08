@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>江湖夜雨十年灯</title>
-    <link>https://xiaker.org/</link>
+    <link>http://xiaker.org/</link>
     <description>Recent content on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>&amp;copy; 2018 江湖夜雨十年灯</copyright>
     <lastBuildDate>Sat, 24 Jun 2017 20:50:41 +0700</lastBuildDate>
     
-	<atom:link href="https://xiaker.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://xiaker.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>License</title>
-      <link>https://xiaker.org/about/license/</link>
+      <link>http://xiaker.org/about/license/</link>
       <pubDate>Sat, 24 Jun 2017 20:50:41 +0700</pubDate>
       
-      <guid>https://xiaker.org/about/license/</guid>
+      <guid>http://xiaker.org/about/license/</guid>
       <description></description>
     </item>
     
     <item>
       <title>如何正确设置docker alpine镜像的时区</title>
-      <link>https://xiaker.org/post/set-alpine-timezone-right-way/</link>
+      <link>http://xiaker.org/post/set-alpine-timezone-right-way/</link>
       <pubDate>Tue, 16 May 2017 15:11:55 +0800</pubDate>
       
-      <guid>https://xiaker.org/post/set-alpine-timezone-right-way/</guid>
+      <guid>http://xiaker.org/post/set-alpine-timezone-right-way/</guid>
       <description>前段时间构建一个基于oprenresty的项目，使用了openresty官方的docker镜像。
 不得不说，docker和openresty都是好东西。openresty的官方镜像默认版本使用的基础镜像是alpine，不得不说alpine也是个好东西。在其他如ubuntu、centos镜像动辄几百M的体积下，只有5M的alpine简直是一股清流。对于我这种128SSD用户来说简直是福音。虽说docker的image是分层的，可以共用某些层，所使用的空间不一定有显示的那么大，但见到只有一位数的显示，心里总会踏实一些。
 当然alpine在维持体积小的情况下，必然牺牲一些东西。比如，他就不带其他的时区文件，在默认的情况下，你是没办法改时区的。在踩到这个坑的时候，我还是找资料踏了出来。
@@ -36,10 +36,10 @@ RUN apk add -U tzdata &amp;amp;&amp;amp; \  cp /usr/share/zoneinfo/Asia/Shanghai
     
     <item>
       <title>《血剑屠龙》—— 那些我与校花的故事</title>
-      <link>https://xiaker.org/post/xue-jian-tu-long/</link>
+      <link>http://xiaker.org/post/xue-jian-tu-long/</link>
       <pubDate>Tue, 07 Oct 2014 15:07:18 +0800</pubDate>
       
-      <guid>https://xiaker.org/post/xue-jian-tu-long/</guid>
+      <guid>http://xiaker.org/post/xue-jian-tu-long/</guid>
       <description>很多年以前，当我还是小学生的时候，我们学校有两大校花，我称呼她们为“陈校花”和“张校花”。虽然我对张校花十分感兴趣，但我跟陈校花的关系更好。
 某天，陈校花从家里带来一本书，至于书的名字和作者我早已经忘记了，那应该是一本托名的盗版书。她凑过来问我看不看，我接过来翻了翻。虽然书名我记不得了，但内容反倒让我记忆犹新：主角的名字叫徐不凡，他挂了，还去阎王殿见到了阎王。我也是第一次在这本书中接触了“十殿阎王”的概念。我当时正痴迷于纯武功打斗的武侠小说，这本书里有鬼怪和法术的描写，所以我不认为它是武侠小说，于是辜负了陈校花的好意，还给了她。陈校花自己津津有味地把这套书看完了。 在以后的很多年中，我还记得这套书的大致信息，很想找来读一读，但一直没找到，于是我便认为我与这套书没什么缘分了。直至后来，我开始了解和研究武侠小说，知道了一个叫曹若冰的作家，我才知道我当年翻过的那本书名叫《血剑屠龙》，到前几天，我才把它读完了。
 细细说来，这本书的构思还是很有意思的。他讲诉徐达(明朝大将，开国功臣)的孙子徐不凡，拜在五柳先生门下学艺。徐不凡的父亲被鞑靼国国师和明朝内的宦官勾结陷害致死，他的师傅也因为藏有武林至宝“血剑”和“血书”，怀璧其罪，被武林人士联合灭门。徐不凡被卸掉了一条腿和一只胳膊，丢了性命，来到了阎王殿。阎王怜他阳寿未尽，且是忠良之后，打发他回了阳间。还预言他会了断冥界的几大悬案：武则天、秦桧等人的鬼魂藏在何处？(全书真的就这两个所谓的“悬案”)
@@ -51,10 +51,10 @@ RUN apk add -U tzdata &amp;amp;&amp;amp; \  cp /usr/share/zoneinfo/Asia/Shanghai
     
     <item>
       <title>Start From Here</title>
-      <link>https://xiaker.org/post/start-from-here/</link>
+      <link>http://xiaker.org/post/start-from-here/</link>
       <pubDate>Thu, 25 Sep 2014 14:35:33 +0800</pubDate>
       
-      <guid>https://xiaker.org/post/start-from-here/</guid>
+      <guid>http://xiaker.org/post/start-from-here/</guid>
       <description>行行重行行，朝朝复朝朝。
 做技术也有好几年了，其间每每有&amp;rdquo;顿悟&amp;rdquo;的时候，就想把他记录下来：一是告知世人，我又顿悟了，我屌爆了； 二是我不能确定我的大脑是否能永远记住这些东西。
 我总在计划，也总在变化。计划了很久的搭建个人博客，有好多的想法，也总在变化着设计的想法。做为一个 强迫症患者，一个选择困难症患者，一个天秤座的男纸，在计划没有完美之前，是不会下手去干的。但时间真的是 是一种神奇的东西，有人说他是疗伤的圣药，有人说他是一切的解药；但不管他是什么药，他改变了我的想法，这 样看来，他是治疗强迫症的药。我还没有痊愈，但我还是决定将这个没有完美的计划执行下来，搭建了这个博客。 以后会发生什么？我不知道。但不管怎样，总算开始了：
