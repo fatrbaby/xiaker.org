@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开始 on 江湖夜雨十年灯</title>
+    <link>http://xiaker.org/tags/%E5%BC%80%E5%A7%8B/</link>
+    <description>Recent content in 开始 on 江湖夜雨十年灯</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 25 Sep 2014 09:53:35 +0800</lastBuildDate>
+    
+	<atom:link href="http://xiaker.org/tags/%E5%BC%80%E5%A7%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Start From Here</title>
+      <link>http://xiaker.org/posts/start-from-here/</link>
+      <pubDate>Thu, 25 Sep 2014 09:53:35 +0800</pubDate>
+      
+      <guid>http://xiaker.org/posts/start-from-here/</guid>
+      <description>start from here 行行重行行，朝朝复朝朝。 做技术也有好几年了，其间每每有”顿悟”的时候，就想把他记录下来：一是告知世人，我又顿悟了，我屌爆了； 二是我不能确定我的大脑是否能永远记住这些东西。 我总在计划，也总在变化。</description>
+    </item>
+    
+  </channel>
+</rss>
