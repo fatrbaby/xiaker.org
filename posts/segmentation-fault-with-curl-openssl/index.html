@@ -10,7 +10,7 @@
         content="fatrbaby"/>
 
   
-  <meta name="description" content="二链子和绕的个人博客"/>
+  <meta name="description" content="最近偶然发现本地的PHP环境在使用CURL请求https的地址时，会抛出一个segmentation fault错误；工作这么久的我第一次遇到这个问题顿时吓到尿崩。马上开始Google搜索解决方案。我本"/>
   
 
   
@@ -19,13 +19,11 @@
   
 
   
-  <link rel="canonical" href="http://xiaker.org/tags/"/>
+  <link rel="canonical" href="http://xiaker.org/posts/segmentation-fault-with-curl-openssl/"/>
 
   
-  <link rel="alternate" type="application/rss&#43;xml" href="http://xiaker.org/tags/index.xml">
-  
 
-  <title>Tags &middot; 江湖夜雨十年灯</title>
+  <title>curl-openssl包引起的 PHP curl segmentation fault &middot; 江湖夜雨十年灯</title>
 
   <link rel="shortcut icon" href="http://xiaker.org/images/favicon.ico"/>
   <link rel="stylesheet" href="http://xiaker.org/css/animate.min.css"/>
@@ -107,157 +105,41 @@
 </div>
 
   <div class="content">
-    <div class="page_tags">
-      <ul>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/%E6%B1%9F%E6%B9%96%E5%A4%9C%E9%9B%A8%E5%8D%81%E5%B9%B4%E7%81%AF">
-            江湖夜雨十年灯 <span class="terms_count">2</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/alpine">
-            alpine <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/curl">
-            curl <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/docker">
-            docker <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/fatrbaby">
-            fatrbaby <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/openssl">
-            openssl <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/php">
-            php <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/segmentation-fault">
-            segmentation-fault <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/timezone">
-            timezone <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/%E4%B8%AD%E6%96%87">
-            中文 <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/%E4%B9%A6%E8%AF%84">
-            书评 <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/%E4%BA%8C%E9%93%BE%E5%AD%90%E5%92%8C%E7%BB%95">
-            二链子和绕 <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/%E5%85%B3%E4%BA%8E">
-            关于 <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/%E5%BC%80%E5%A7%8B">
-            开始 <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/%E6%97%B6%E5%8C%BA">
-            时区 <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/%E6%AD%A6%E4%BE%A0%E5%B0%8F%E8%AF%B4">
-            武侠小说 <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/%E8%A1%80%E5%89%91%E5%B1%A0%E9%BE%99">
-            血剑屠龙 <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-        
-        <li>
-          <a href="http://xiaker.org/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0">
-            读书笔记 <span class="terms_count">1</span>
-          </a>
-        </li>
-        
-        
-      </ul>
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/segmentation-fault-with-curl-openssl/'>curl-openssl包引起的 PHP curl segmentation fault</a></h2>
+          <span class="date">2019.07.17</span>
+        </div>
+        <div class="post_content markdown"><p>最近偶然发现本地的PHP环境在使用CURL请求https的地址时，会抛出一个segmentation fault错误；工作这么久的我第一次遇到这个问题顿时吓到尿崩。马上开始Google搜索解决方案。我本地是MacOS使用Homebrew安装的php7.2，brew自动处理依赖安装了curl-openssl。最常被提到的解决方案就是开启<code>coredump</code>，使用gdb分析日志。但由于在Mac上我一直没能找到写下的日志，所以只能作罢。后来我找到了这个<a href="https://github.com/Homebrew/homebrew-core/issues/40812">issue</a>，根据这个issue里所说，我先使用<code>brew uninstall --ignore-dependencies curl-openssl</code>卸载了<code>curl-openssl</code>包，这个时候程序可以正常运行了，好像php也没有一定依赖这个包，然后安装了其他版本的<code>curl-openssl</code>，这个问题得到了解决。</p>
+
+<pre><code class="language-shell">brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/e47f3e2682fa3d8a6ee58ded40718a1326e08a6d/Formula/curl-openssl.rb
+</code></pre>
+</div>
+        <div class="post_footer">
+          
+          <div class="meta">
+            <div class="info">
+              <span class="field tags">
+                <i class="remixicon-stack-line"></i>
+                
+                <a href="http://xiaker.org/tags/php/">php</a>
+                
+                <a href="http://xiaker.org/tags/curl/">curl</a>
+                
+                <a href="http://xiaker.org/tags/openssl/">openssl</a>
+                
+                <a href="http://xiaker.org/tags/segmentation-fault/">segmentation fault</a>
+                
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      
     </div>
-    <div class="pagination"></div>
   </div>
   <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
 </div>
