@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <title>Facebook Share Demo</title>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+</head>
+<body>
+
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId            : '433021584006541',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v4.0'
+        });
+    };
+
+    window.onload = function () {
+        FB.ui({
+            method: 'share',
+            href: 'https://developers.facebook.com/docs/',
+            redirect_uri: 'http:://xiaker.org/about/index.html?u=' + Math.random()
+        }, function(response){
+            console.log(response);
+        });
+    };
+</script>
+
+</body>
+</html>
