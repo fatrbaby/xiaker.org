@@ -27,10 +27,10 @@
             href: 'http://xiaker.org',
             redirect_uri: 'https://www.islide.cc/download'
         }, function(response){
-            if (response && response.post_id) {
-                alert('Post was published.');
+            if (response && !response.error_message) {
+                alert('Posting completed.');
             } else {
-                alert('Post was not published.');
+                alert('Error while posting.');
             }
         });
     };
