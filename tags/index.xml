@@ -6,10 +6,46 @@
     <description>Recent content in Tags on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 17 Jul 2019 11:58:01 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Sep 2019 10:49:03 +0800</lastBuildDate>
     
 	<atom:link href="http://xiaker.org/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>combine image</title>
+      <link>http://xiaker.org/tags/combine-image/</link>
+      <pubDate>Wed, 25 Sep 2019 10:49:03 +0800</pubDate>
+      
+      <guid>http://xiaker.org/tags/combine-image/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>imagick</title>
+      <link>http://xiaker.org/tags/imagick/</link>
+      <pubDate>Wed, 25 Sep 2019 10:49:03 +0800</pubDate>
+      
+      <guid>http://xiaker.org/tags/imagick/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>imagick extension</title>
+      <link>http://xiaker.org/tags/imagick-extension/</link>
+      <pubDate>Wed, 25 Sep 2019 10:49:03 +0800</pubDate>
+      
+      <guid>http://xiaker.org/tags/imagick-extension/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>http://xiaker.org/tags/php/</link>
+      <pubDate>Wed, 25 Sep 2019 10:49:03 +0800</pubDate>
+      
+      <guid>http://xiaker.org/tags/php/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>curl</title>
@@ -26,15 +62,6 @@
       <pubDate>Wed, 17 Jul 2019 11:58:01 +0800</pubDate>
       
       <guid>http://xiaker.org/tags/openssl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>php</title>
-      <link>http://xiaker.org/tags/php/</link>
-      <pubDate>Wed, 17 Jul 2019 11:58:01 +0800</pubDate>
-      
-      <guid>http://xiaker.org/tags/php/</guid>
       <description></description>
     </item>
     
