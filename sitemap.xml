@@ -3,6 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://xiaker.org/tags/druid/</loc>
+    <lastmod>2019-12-12T11:45:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xiaker.org/tags/java/</loc>
+    <lastmod>2019-12-12T11:45:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xiaker.org/tags/jpa/</loc>
+    <lastmod>2019-12-12T11:45:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xiaker.org/posts/</loc>
+    <lastmod>2019-12-12T11:45:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xiaker.org/tags/springboot/</loc>
+    <lastmod>2019-12-12T11:45:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xiaker.org/posts/springboot-jpa-config-durid/</loc>
+    <lastmod>2019-12-12T11:45:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xiaker.org/tags/</loc>
+    <lastmod>2019-12-12T11:45:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xiaker.org/</loc>
+    <lastmod>2019-12-12T11:45:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xiaker.org/tags/%E8%BF%9E%E6%8E%A5%E6%B1%A0/</loc>
+    <lastmod>2019-12-12T11:45:47+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://xiaker.org/tags/combine-image/</loc>
     <lastmod>2019-09-25T10:49:03+08:00</lastmod>
   </url>
@@ -23,22 +68,7 @@
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/</loc>
-    <lastmod>2019-09-25T10:49:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://xiaker.org/tags/</loc>
-    <lastmod>2019-09-25T10:49:03+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://xiaker.org/posts/merge-image-use-php-imagick/</loc>
-    <lastmod>2019-09-25T10:49:03+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://xiaker.org/</loc>
     <lastmod>2019-09-25T10:49:03+08:00</lastmod>
   </url>
   

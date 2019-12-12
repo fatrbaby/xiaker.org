@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 Sep 2019 10:49:03 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 12 Dec 2019 11:45:47 +0800</lastBuildDate>
     
 	<atom:link href="http://xiaker.org/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>springboot &#43; spring-data-jpa整合druid</title>
+      <link>http://xiaker.org/posts/springboot-jpa-config-durid/</link>
+      <pubDate>Thu, 12 Dec 2019 11:45:47 +0800</pubDate>
+      
+      <guid>http://xiaker.org/posts/springboot-jpa-config-durid/</guid>
+      <description>&lt;p&gt;Java项目的整合，无非就是记录一坨一坨的配置，至于原理？ 大家都懂的。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>使用PHP Imagick进行拼图</title>
