@@ -6,10 +6,19 @@
     <description>Recent content on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 12 Dec 2019 11:45:47 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 14:47:28 +0800</lastBuildDate>
     
 	<atom:link href="http://xiaker.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>指定最大宽高，按比例缩放图片</title>
+      <link>http://xiaker.org/posts/scale-picture-by-maximum-aspect-ratio/</link>
+      <pubDate>Fri, 10 Jan 2020 14:47:28 +0800</pubDate>
+      
+      <guid>http://xiaker.org/posts/scale-picture-by-maximum-aspect-ratio/</guid>
+      <description>&lt;p&gt;有时候啊，可能要限制图片的尺寸在一定的范围内，又不能改变图片的形状，以下方法能根据最大宽高，按比例算出新的宽高。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>springboot &#43; spring-data-jpa整合druid</title>
