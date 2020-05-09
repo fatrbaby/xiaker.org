@@ -96,7 +96,7 @@
         
         
         
-        <a href="https:://weibo.com/fatrbaby" title="weibo" target="_blank"><i class="remixicon-weibo-fill"></i></a>
+        <a href="https://weibo.com/fatrbaby" title="weibo" target="_blank"><i class="remixicon-weibo-fill"></i></a>
         
         
         <a href="http://xiaker.org/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
@@ -113,262 +113,255 @@
           <span class="date">2019.12.12</span>
         </div>
         <div class="post_content markdown"><p>Java项目的整合，无非就是记录一坨一坨的配置，至于原理？ 大家都懂的。</p>
-
 <p><code>pom.xml</code>相关依赖：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0&#34;</span> <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+	<span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
+	<span style="color:#f92672">&lt;modelVersion&gt;</span>4.0.0<span style="color:#f92672">&lt;/modelVersion&gt;</span>
+	<span style="color:#f92672">&lt;parent&gt;</span>
+		<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+		<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-parent<span style="color:#f92672">&lt;/artifactId&gt;</span>
+		<span style="color:#f92672">&lt;version&gt;</span>2.2.2.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+		<span style="color:#f92672">&lt;relativePath/&gt;</span> <span style="color:#75715e">&lt;!-- lookup parent from repository --&gt;</span>
+	<span style="color:#f92672">&lt;/parent&gt;</span>
+	<span style="color:#f92672">&lt;groupId&gt;</span>org.xiaker<span style="color:#f92672">&lt;/groupId&gt;</span>
+	<span style="color:#f92672">&lt;artifactId&gt;</span>boot-study<span style="color:#f92672">&lt;/artifactId&gt;</span>
+	<span style="color:#f92672">&lt;version&gt;</span>0.0.1-SNAPSHOT<span style="color:#f92672">&lt;/version&gt;</span>
+	<span style="color:#f92672">&lt;name&gt;</span>boot-study<span style="color:#f92672">&lt;/name&gt;</span>
+	<span style="color:#f92672">&lt;description&gt;</span>Demo project for Spring Boot<span style="color:#f92672">&lt;/description&gt;</span>
 
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-	xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
-	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-	&lt;parent&gt;
-		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-		&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
-		&lt;version&gt;2.2.2.RELEASE&lt;/version&gt;
-		&lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
-	&lt;/parent&gt;
-	&lt;groupId&gt;org.xiaker&lt;/groupId&gt;
-	&lt;artifactId&gt;boot-study&lt;/artifactId&gt;
-	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
-	&lt;name&gt;boot-study&lt;/name&gt;
-	&lt;description&gt;Demo project for Spring Boot&lt;/description&gt;
+	<span style="color:#f92672">&lt;properties&gt;</span>
+		<span style="color:#f92672">&lt;java.version&gt;</span>1.8<span style="color:#f92672">&lt;/java.version&gt;</span>
+	<span style="color:#f92672">&lt;/properties&gt;</span>
 
-	&lt;properties&gt;
-		&lt;java.version&gt;1.8&lt;/java.version&gt;
-	&lt;/properties&gt;
+	<span style="color:#f92672">&lt;dependencies&gt;</span>
+		<span style="color:#f92672">&lt;dependency&gt;</span>
+			<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+			<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
+		<span style="color:#f92672">&lt;/dependency&gt;</span>
 
-	&lt;dependencies&gt;
-		&lt;dependency&gt;
-			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-			&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
-		&lt;/dependency&gt;
+		<span style="color:#f92672">&lt;dependency&gt;</span>
+			<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+			<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-data-jpa<span style="color:#f92672">&lt;/artifactId&gt;</span>
+		<span style="color:#f92672">&lt;/dependency&gt;</span>
 
-		&lt;dependency&gt;
-			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-			&lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
-		&lt;/dependency&gt;
+		<span style="color:#f92672">&lt;dependency&gt;</span>
+			<span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
+			<span style="color:#f92672">&lt;artifactId&gt;</span>druid-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+			<span style="color:#f92672">&lt;version&gt;</span>1.1.21<span style="color:#f92672">&lt;/version&gt;</span>
+		<span style="color:#f92672">&lt;/dependency&gt;</span>
 
-		&lt;dependency&gt;
-			&lt;groupId&gt;com.alibaba&lt;/groupId&gt;
-			&lt;artifactId&gt;druid-spring-boot-starter&lt;/artifactId&gt;
-			&lt;version&gt;1.1.21&lt;/version&gt;
-		&lt;/dependency&gt;
+		<span style="color:#f92672">&lt;dependency&gt;</span>
+			<span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+			<span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+			<span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+		<span style="color:#f92672">&lt;/dependency&gt;</span>
 
-		&lt;dependency&gt;
-			&lt;groupId&gt;mysql&lt;/groupId&gt;
-			&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
-			&lt;scope&gt;runtime&lt;/scope&gt;
-		&lt;/dependency&gt;
+		<span style="color:#f92672">&lt;dependency&gt;</span>
+			<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+			<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+			<span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+			<span style="color:#f92672">&lt;exclusions&gt;</span>
+				<span style="color:#f92672">&lt;exclusion&gt;</span>
+					<span style="color:#f92672">&lt;groupId&gt;</span>org.junit.vintage<span style="color:#f92672">&lt;/groupId&gt;</span>
+					<span style="color:#f92672">&lt;artifactId&gt;</span>junit-vintage-engine<span style="color:#f92672">&lt;/artifactId&gt;</span>
+				<span style="color:#f92672">&lt;/exclusion&gt;</span>
+			<span style="color:#f92672">&lt;/exclusions&gt;</span>
+		<span style="color:#f92672">&lt;/dependency&gt;</span>
+	<span style="color:#f92672">&lt;/dependencies&gt;</span>
 
-		&lt;dependency&gt;
-			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-			&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
-			&lt;scope&gt;test&lt;/scope&gt;
-			&lt;exclusions&gt;
-				&lt;exclusion&gt;
-					&lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
-					&lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
-				&lt;/exclusion&gt;
-			&lt;/exclusions&gt;
-		&lt;/dependency&gt;
-	&lt;/dependencies&gt;
+	<span style="color:#f92672">&lt;build&gt;</span>
+		<span style="color:#f92672">&lt;plugins&gt;</span>
+			<span style="color:#f92672">&lt;plugin&gt;</span>
+				<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+				<span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+			<span style="color:#f92672">&lt;/plugin&gt;</span>
+		<span style="color:#f92672">&lt;/plugins&gt;</span>
+	<span style="color:#f92672">&lt;/build&gt;</span>
 
-	&lt;build&gt;
-		&lt;plugins&gt;
-			&lt;plugin&gt;
-				&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-				&lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
-			&lt;/plugin&gt;
-		&lt;/plugins&gt;
-	&lt;/build&gt;
+<span style="color:#f92672">&lt;/project&gt;</span>
 
-&lt;/project&gt;
-</code></pre>
+</code></pre></div><p><code>application.yml</code>相关配置</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">spring</span>:
+  <span style="color:#66d9ef">datasource</span>:
+    <span style="color:#66d9ef">url</span>: jdbc:mysql://host:port/database?serverTimezone=GMT
+    <span style="color:#66d9ef">username</span>: username
+    <span style="color:#66d9ef">password</span>: password
+    <span style="color:#66d9ef">driver-class-name</span>: com.mysql.cj.jdbc.Driver
+    <span style="color:#66d9ef">type</span>: com.alibaba.druid.pool.DruidDataSource
+    <span style="color:#75715e"># 初始化连接池大小</span>
+    <span style="color:#66d9ef">initialSize</span>: <span style="color:#ae81ff">5</span>
+    <span style="color:#66d9ef">minIdle</span>: <span style="color:#ae81ff">5</span>
+    <span style="color:#66d9ef">maxActive</span>: <span style="color:#ae81ff">20</span>
+    <span style="color:#75715e"># 配置获取连接等待超时的时间</span>
+    <span style="color:#66d9ef">maxWait</span>: <span style="color:#ae81ff">60000</span>
+    <span style="color:#75715e"># 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒</span>
+    <span style="color:#66d9ef">timeBetweenEvictionRunsMillis</span>: <span style="color:#ae81ff">60000</span>
+    <span style="color:#75715e"># 配置一个连接在池中最小生存的时间，单位是毫秒</span>
+    <span style="color:#66d9ef">minEvictableIdleTimeMillis</span>: <span style="color:#ae81ff">300000</span>
+    <span style="color:#75715e"># Oracle请使用select 1 from dual</span>
+    <span style="color:#66d9ef">validationQuery</span>: select <span style="color:#e6db74">&#39;x&#39;</span>
+    <span style="color:#66d9ef">testWhileIdle</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#66d9ef">testOnBorrow</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#66d9ef">testOnReturn</span>: <span style="color:#66d9ef">false</span>
+    <span style="color:#75715e"># 打开PSCache，并且指定每个连接上PSCache的大小</span>
+    <span style="color:#66d9ef">poolPreparedStatements</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># 配置监控统计拦截的filters，去掉后监控界面sql无法统计，&#39;wall&#39;用于防火墙</span>
+    <span style="color:#66d9ef">filters</span>: stat,wall,slf4j
+    <span style="color:#66d9ef">maxPoolPreparedStatementPerConnectionSize</span>: <span style="color:#ae81ff">20</span>
+    <span style="color:#75715e"># 合并多个DruidDataSource的监控数据</span>
+    <span style="color:#66d9ef">useGlobalDataSourceStat</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#75715e"># 通过connectProperties属性来打开mergeSql功能；慢SQL记录</span>
+    <span style="color:#66d9ef">connectionProperties</span>: druid.stat.mergeSql=<span style="color:#66d9ef">true</span>;druid.stat.slowSqlMillis=<span style="color:#ae81ff">500</span>
+  <span style="color:#66d9ef">data</span>:
+    <span style="color:#66d9ef">jpa</span>:
+      <span style="color:#66d9ef">repositories</span>:
+        <span style="color:#66d9ef">enabled</span>: <span style="color:#66d9ef">true</span>
+<span style="color:#66d9ef">server</span>:
+  <span style="color:#66d9ef">port</span>: <span style="color:#ae81ff">9200</span>
 
-<p><code>application.yml</code>相关配置</p>
+</code></pre></div><p>由于<code>application.xml</code>里的一些配置，<code>springboot</code>并不认识，所以要用一个类来解析：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> org.xiaker.bootstudy.config<span style="color:#f92672">;</span>
 
-<pre><code class="language-yaml">spring:
-  datasource:
-    url: jdbc:mysql://host:port/database?serverTimezone=GMT
-    username: username
-    password: password
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    type: com.alibaba.druid.pool.DruidDataSource
-    # 初始化连接池大小
-    initialSize: 5
-    minIdle: 5
-    maxActive: 20
-    # 配置获取连接等待超时的时间
-    maxWait: 60000
-    # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
-    timeBetweenEvictionRunsMillis: 60000
-    # 配置一个连接在池中最小生存的时间，单位是毫秒
-    minEvictableIdleTimeMillis: 300000
-    # Oracle请使用select 1 from dual
-    validationQuery: select 'x'
-    testWhileIdle: true
-    testOnBorrow: true
-    testOnReturn: false
-    # 打开PSCache，并且指定每个连接上PSCache的大小
-    poolPreparedStatements: true
-    # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
-    filters: stat,wall,slf4j
-    maxPoolPreparedStatementPerConnectionSize: 20
-    # 合并多个DruidDataSource的监控数据
-    useGlobalDataSourceStat: true
-    # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
-    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
-  data:
-    jpa:
-      repositories:
-        enabled: true
-server:
-  port: 9200
-</code></pre>
+<span style="color:#f92672">import</span> com.alibaba.druid.pool.DruidDataSource<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> com.alibaba.druid.support.http.StatViewServlet<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> com.alibaba.druid.support.http.WebStatFilter<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.slf4j.Logger<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.slf4j.LoggerFactory<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.beans.factory.annotation.Value<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.boot.web.servlet.FilterRegistrationBean<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.boot.web.servlet.ServletRegistrationBean<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.annotation.Bean<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.annotation.Configuration<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> org.springframework.context.annotation.Primary<span style="color:#f92672">;</span>
 
-<p>由于<code>application.xml</code>里的一些配置，<code>springboot</code>并不认识，所以要用一个类来解析：</p>
+<span style="color:#f92672">import</span> javax.sql.DataSource<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.sql.SQLException<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">package org.xiaker.bootstudy.config;
+<span style="color:#a6e22e">@Configuration</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DruidConfig</span> <span style="color:#f92672">{</span>
 
-import com.alibaba.druid.pool.DruidDataSource;
-import com.alibaba.druid.support.http.StatViewServlet;
-import com.alibaba.druid.support.http.WebStatFilter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+    <span style="color:#66d9ef">private</span> Logger logger <span style="color:#f92672">=</span> LoggerFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">getLogger</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">());</span>
 
-import javax.sql.DataSource;
-import java.sql.SQLException;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.url}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> String dbUrl<span style="color:#f92672">;</span>
 
-@Configuration
-public class DruidConfig {
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.username}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> String username<span style="color:#f92672">;</span>
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.password}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.url}&quot;)
-    private String dbUrl;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.driver-class-name}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> String driverClassName<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.username}&quot;)
-    private String username;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.initialSize}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> initialSize<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.password}&quot;)
-    private String password;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.minIdle}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> minIdle<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.driver-class-name}&quot;)
-    private String driverClassName;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.maxActive}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> maxActive<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.initialSize}&quot;)
-    private int initialSize;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.maxWait}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> maxWait<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.minIdle}&quot;)
-    private int minIdle;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.timeBetweenEvictionRunsMillis}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> timeBetweenEvictionRunsMillis<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.maxActive}&quot;)
-    private int maxActive;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.minEvictableIdleTimeMillis}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> minEvictableIdleTimeMillis<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.maxWait}&quot;)
-    private int maxWait;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.validationQuery}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> String validationQuery<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.timeBetweenEvictionRunsMillis}&quot;)
-    private int timeBetweenEvictionRunsMillis;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.testWhileIdle}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> testWhileIdle<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.minEvictableIdleTimeMillis}&quot;)
-    private int minEvictableIdleTimeMillis;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.testOnBorrow}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> testOnBorrow<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.validationQuery}&quot;)
-    private String validationQuery;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.testOnReturn}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> testOnReturn<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.testWhileIdle}&quot;)
-    private boolean testWhileIdle;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.poolPreparedStatements}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">boolean</span> poolPreparedStatements<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.testOnBorrow}&quot;)
-    private boolean testOnBorrow;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.maxPoolPreparedStatementPerConnectionSize}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> maxPoolPreparedStatementPerConnectionSize<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.testOnReturn}&quot;)
-    private boolean testOnReturn;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${spring.datasource.filters}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> String filters<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.poolPreparedStatements}&quot;)
-    private boolean poolPreparedStatements;
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;{spring.datasource.connectionProperties}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> String connectionProperties<span style="color:#f92672">;</span>
 
-    @Value(&quot;${spring.datasource.maxPoolPreparedStatementPerConnectionSize}&quot;)
-    private int maxPoolPreparedStatementPerConnectionSize;
+    <span style="color:#a6e22e">@Bean</span>
+    <span style="color:#a6e22e">@Primary</span>
+    <span style="color:#66d9ef">public</span> DataSource <span style="color:#a6e22e">dataSource</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        DruidDataSource datasource <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DruidDataSource<span style="color:#f92672">();</span>
+        logger<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;----------- druid datasource ----------&#34;</span><span style="color:#f92672">);</span>
 
-    @Value(&quot;${spring.datasource.filters}&quot;)
-    private String filters;
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setUrl</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">dbUrl</span><span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span>username<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span>password<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setDriverClassName</span><span style="color:#f92672">(</span>driverClassName<span style="color:#f92672">);</span>
 
-    @Value(&quot;{spring.datasource.connectionProperties}&quot;)
-    private String connectionProperties;
+        <span style="color:#75715e">//configuration
+</span><span style="color:#75715e"></span>        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setInitialSize</span><span style="color:#f92672">(</span>initialSize<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setMinIdle</span><span style="color:#f92672">(</span>minIdle<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setMaxActive</span><span style="color:#f92672">(</span>maxActive<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setMaxWait</span><span style="color:#f92672">(</span>maxWait<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setTimeBetweenEvictionRunsMillis</span><span style="color:#f92672">(</span>timeBetweenEvictionRunsMillis<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setMinEvictableIdleTimeMillis</span><span style="color:#f92672">(</span>minEvictableIdleTimeMillis<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setValidationQuery</span><span style="color:#f92672">(</span>validationQuery<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setTestWhileIdle</span><span style="color:#f92672">(</span>testWhileIdle<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setTestOnBorrow</span><span style="color:#f92672">(</span>testOnBorrow<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setTestOnReturn</span><span style="color:#f92672">(</span>testOnReturn<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setPoolPreparedStatements</span><span style="color:#f92672">(</span>poolPreparedStatements<span style="color:#f92672">);</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setMaxPoolPreparedStatementPerConnectionSize</span><span style="color:#f92672">(</span>maxPoolPreparedStatementPerConnectionSize<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+            datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setFilters</span><span style="color:#f92672">(</span>filters<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>SQLException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            logger<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;druid configuration Exception&#34;</span><span style="color:#f92672">,</span> e<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        datasource<span style="color:#f92672">.</span><span style="color:#a6e22e">setConnectionProperties</span><span style="color:#f92672">(</span>connectionProperties<span style="color:#f92672">);</span>
 
-    @Bean
-    @Primary
-    public DataSource dataSource() {
-        DruidDataSource datasource = new DruidDataSource();
-        logger.info(&quot;----------- druid datasource ----------&quot;);
+        <span style="color:#66d9ef">return</span> datasource<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-        datasource.setUrl(this.dbUrl);
-        datasource.setUsername(username);
-        datasource.setPassword(password);
-        datasource.setDriverClassName(driverClassName);
+    <span style="color:#a6e22e">@Bean</span>
+    <span style="color:#66d9ef">public</span> ServletRegistrationBean<span style="color:#f92672">&lt;</span>StatViewServlet<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">statViewServlet</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 创建servlet注册实体
+</span><span style="color:#75715e"></span>        ServletRegistrationBean<span style="color:#f92672">&lt;</span>StatViewServlet<span style="color:#f92672">&gt;</span> servletRegistrationBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServletRegistrationBean<span style="color:#f92672">&lt;&gt;(</span><span style="color:#66d9ef">new</span> StatViewServlet<span style="color:#f92672">());</span>
+        <span style="color:#75715e">// druid监控统计路径
+</span><span style="color:#75715e"></span>        servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addUrlMappings</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/druid/*&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 设置ip白名单(没有配置或者为空，则允许所有访问)
+</span><span style="color:#75715e"></span>        servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;allow&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 设置ip黑名单,如果allow与deny共同存在时,deny优先于allow
+</span><span style="color:#75715e"></span>        servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;deny&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 设置控制台管理用户
+</span><span style="color:#75715e"></span>        servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;loginUsername&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;admin&#34;</span><span style="color:#f92672">);</span>
+        servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;loginPassword&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;admin&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 是否可以重置数据
+</span><span style="color:#75715e"></span>        servletRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;resetEnable&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;false&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> servletRegistrationBean<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-        //configuration
-        datasource.setInitialSize(initialSize);
-        datasource.setMinIdle(minIdle);
-        datasource.setMaxActive(maxActive);
-        datasource.setMaxWait(maxWait);
-        datasource.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);
-        datasource.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);
-        datasource.setValidationQuery(validationQuery);
-        datasource.setTestWhileIdle(testWhileIdle);
-        datasource.setTestOnBorrow(testOnBorrow);
-        datasource.setTestOnReturn(testOnReturn);
-        datasource.setPoolPreparedStatements(poolPreparedStatements);
-        datasource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);
-        try {
-            datasource.setFilters(filters);
-        } catch (SQLException e) {
-            logger.error(&quot;druid configuration Exception&quot;, e);
-        }
-        datasource.setConnectionProperties(connectionProperties);
+    <span style="color:#a6e22e">@Bean</span>
+    <span style="color:#66d9ef">public</span> FilterRegistrationBean<span style="color:#f92672">&lt;</span>WebStatFilter<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">statFilter</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 创建过滤器
+</span><span style="color:#75715e"></span>        FilterRegistrationBean<span style="color:#f92672">&lt;</span>WebStatFilter<span style="color:#f92672">&gt;</span> filterRegistrationBean <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FilterRegistrationBean<span style="color:#f92672">&lt;&gt;(</span><span style="color:#66d9ef">new</span> WebStatFilter<span style="color:#f92672">());</span>
+        <span style="color:#75715e">// filterRegistrationBean.setName(&#34;druidWebStatFilter&#34;);
+</span><span style="color:#75715e"></span>        filterRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addUrlPatterns</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/*&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 忽略过滤的形式
+</span><span style="color:#75715e"></span>        filterRegistrationBean<span style="color:#f92672">.</span><span style="color:#a6e22e">addInitParameter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;exclusions&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> filterRegistrationBean<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-        return datasource;
-    }
-
-    @Bean
-    public ServletRegistrationBean&lt;StatViewServlet&gt; statViewServlet() {
-        // 创建servlet注册实体
-        ServletRegistrationBean&lt;StatViewServlet&gt; servletRegistrationBean = new ServletRegistrationBean&lt;&gt;(new StatViewServlet());
-        // druid监控统计路径
-        servletRegistrationBean.addUrlMappings(&quot;/druid/*&quot;);
-        // 设置ip白名单(没有配置或者为空，则允许所有访问)
-        servletRegistrationBean.addInitParameter(&quot;allow&quot;, &quot;&quot;);
-        // 设置ip黑名单,如果allow与deny共同存在时,deny优先于allow
-        servletRegistrationBean.addInitParameter(&quot;deny&quot;, &quot;&quot;);
-        // 设置控制台管理用户
-        servletRegistrationBean.addInitParameter(&quot;loginUsername&quot;, &quot;admin&quot;);
-        servletRegistrationBean.addInitParameter(&quot;loginPassword&quot;, &quot;admin&quot;);
-        // 是否可以重置数据
-        servletRegistrationBean.addInitParameter(&quot;resetEnable&quot;, &quot;false&quot;);
-        return servletRegistrationBean;
-    }
-
-    @Bean
-    public FilterRegistrationBean&lt;WebStatFilter&gt; statFilter() {
-        // 创建过滤器
-        FilterRegistrationBean&lt;WebStatFilter&gt; filterRegistrationBean = new FilterRegistrationBean&lt;&gt;(new WebStatFilter());
-        // filterRegistrationBean.setName(&quot;druidWebStatFilter&quot;);
-        filterRegistrationBean.addUrlPatterns(&quot;/*&quot;);
-        // 忽略过滤的形式
-        filterRegistrationBean.addInitParameter(&quot;exclusions&quot;, &quot;*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*&quot;);
-        return filterRegistrationBean;
-    }
-}
-</code></pre>
-
-<p>这一个套路打下来，就可以愉快滴使用<code>druid</code>监控了。</p></div>
+</code></pre></div><p>这一个套路打下来，就可以愉快滴使用<code>druid</code>监控了。</p></div>
         <div class="post_footer">
           
           <div class="meta">
@@ -376,15 +369,21 @@ public class DruidConfig {
               <span class="field tags">
                 <i class="remixicon-stack-line"></i>
                 
-                <a href="http://xiaker.org/tags/springboot/">springboot</a>
+                <a href="http://xiaker.org/tags/fatrbaby/">fatrbaby</a>
                 
-                <a href="http://xiaker.org/tags/jpa/">jpa</a>
+                <a href="http://xiaker.org/tags/%E4%BA%8C%E9%93%BE%E5%AD%90%E5%92%8C%E7%BB%95/">二链子和绕</a>
                 
-                <a href="http://xiaker.org/tags/druid/">druid</a>
+                <a href="http://xiaker.org/tags/%E6%B1%9F%E6%B9%96%E5%A4%9C%E9%9B%A8%E5%8D%81%E5%B9%B4%E7%81%AF/">江湖夜雨十年灯</a>
                 
-                <a href="http://xiaker.org/tags/java/">java</a>
+                <a href="http://xiaker.org/tags/%E9%BE%9F/">龟</a>
                 
-                <a href="http://xiaker.org/tags/%E8%BF%9E%E6%8E%A5%E6%B1%A0/">连接池</a>
+                <a href="http://xiaker.org/tags/%E7%88%AC%E5%AE%A0/">爬宠</a>
+                
+                <a href="http://xiaker.org/tags/php/">PHP</a>
+                
+                <a href="http://xiaker.org/tags/java/">Java</a>
+                
+                <a href="http://xiaker.org/tags/golang/">golang</a>
                 
               </span>
             </div>
@@ -405,7 +404,7 @@ public class DruidConfig {
   </div>
 
   <div class="footer_slogan">
-    <span>江湖夜雨十年灯</span>
+    <span>仗剑江湖载酒行</span>
   </div>
 </footer>
 

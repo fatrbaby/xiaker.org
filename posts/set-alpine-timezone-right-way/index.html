@@ -10,7 +10,9 @@
         content="fatrbaby"/>
 
   
-  <meta name="description" content="前段时间构建一个基于oprenresty的项目，使用了openresty官方的docker镜像。 不得不说，docker和openresty都是好东西。openresty的官方镜像默认版本使用的基础镜像"/>
+  <meta name="description" content="前段时间构建一个基于oprenresty的项目，使用了openresty官方的docker镜像。
+不得不说，docker和openresty都是好东西。openresty的官方镜像默认版本使用的基础镜像是alpine，不得不说alpine也是个好东西。在其他如ubuntu、centos镜像动辄几百M的体积下，只有5M的alpine简直是一股清流。对于我这种128SSD用户来说简直是福音。虽说docker的image是分层的，可以共用某些层，所使用的空间不一定有显示的那么大，但见到只有一位数的显示，心里总会踏实一些。
+"/>
   
 
   
@@ -95,7 +97,7 @@
         
         
         
-        <a href="https:://weibo.com/fatrbaby" title="weibo" target="_blank"><i class="remixicon-weibo-fill"></i></a>
+        <a href="https://weibo.com/fatrbaby" title="weibo" target="_blank"><i class="remixicon-weibo-fill"></i></a>
         
         
         <a href="http://xiaker.org/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
@@ -112,17 +114,13 @@
           <span class="date">2017.05.16</span>
         </div>
         <div class="post_content markdown"><p>前段时间构建一个基于oprenresty的项目，使用了openresty官方的docker镜像。</p>
-
 <p>不得不说，docker和openresty都是好东西。openresty的官方镜像默认版本使用的基础镜像是alpine，不得不说alpine也是个好东西。在其他如ubuntu、centos镜像动辄几百M的体积下，只有5M的alpine简直是一股清流。对于我这种128SSD用户来说简直是福音。虽说docker的image是分层的，可以共用某些层，所使用的空间不一定有显示的那么大，但见到只有一位数的显示，心里总会踏实一些。</p>
-
 <p>当然alpine在维持体积小的情况下，必然牺牲一些东西。比如，他就不带其他的时区文件，在默认的情况下，你是没办法改时区的。在踩到这个坑的时候，我还是找资料踏了出来。</p>
-
 <p>Dockerfile里加上这段:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"> RUN apk add -U tzdata <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-<pre><code class="language-shell"> RUN apk add -U tzdata &amp;&amp; \
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-</code></pre>
-</div>
+</code></pre></div></div>
         <div class="post_footer">
           
           <div class="meta">
@@ -130,13 +128,21 @@
               <span class="field tags">
                 <i class="remixicon-stack-line"></i>
                 
-                <a href="http://xiaker.org/tags/docker/">docker</a>
+                <a href="http://xiaker.org/tags/fatrbaby/">fatrbaby</a>
                 
-                <a href="http://xiaker.org/tags/%E6%97%B6%E5%8C%BA/">时区</a>
+                <a href="http://xiaker.org/tags/%E4%BA%8C%E9%93%BE%E5%AD%90%E5%92%8C%E7%BB%95/">二链子和绕</a>
                 
-                <a href="http://xiaker.org/tags/timezone/">timezone</a>
+                <a href="http://xiaker.org/tags/%E6%B1%9F%E6%B9%96%E5%A4%9C%E9%9B%A8%E5%8D%81%E5%B9%B4%E7%81%AF/">江湖夜雨十年灯</a>
                 
-                <a href="http://xiaker.org/tags/alpine/">alpine</a>
+                <a href="http://xiaker.org/tags/%E9%BE%9F/">龟</a>
+                
+                <a href="http://xiaker.org/tags/%E7%88%AC%E5%AE%A0/">爬宠</a>
+                
+                <a href="http://xiaker.org/tags/php/">PHP</a>
+                
+                <a href="http://xiaker.org/tags/java/">Java</a>
+                
+                <a href="http://xiaker.org/tags/golang/">golang</a>
                 
               </span>
             </div>
@@ -157,7 +163,7 @@
   </div>
 
   <div class="footer_slogan">
-    <span>江湖夜雨十年灯</span>
+    <span>仗剑江湖载酒行</span>
   </div>
 </footer>
 
