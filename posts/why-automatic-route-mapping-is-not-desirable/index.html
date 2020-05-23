@@ -10,7 +10,8 @@
         content="fatrbaby"/>
 
   
-  <meta name="description" content="二链子和绕的个人博客"/>
+  <meta name="description" content="在很多地方看到人们抱怨Laravel或者Symfony一类的框架定义路由麻烦；根据我的观察，这好像是PHP特有的一个现象。
+"/>
   
 
   
@@ -19,13 +20,11 @@
   
 
   
-  <link rel="canonical" href="http://xiaker.org/posts/"/>
+  <link rel="canonical" href="http://xiaker.org/posts/why-automatic-route-mapping-is-not-desirable/"/>
 
   
-  <link rel="alternate" type="application/rss&#43;xml" href="http://xiaker.org/posts/index.xml">
-  
 
-  <title>Posts &middot; 江湖夜雨十年灯</title>
+  <title>为什么自动映射路由不可取 &middot; 江湖夜雨十年灯</title>
 
   <link rel="shortcut icon" href="http://xiaker.org/images/favicon.ico"/>
   <link rel="stylesheet" href="http://xiaker.org/css/animate.min.css"/>
@@ -107,86 +106,35 @@
 </div>
 
   <div class="content">
-    <div class="list_with_title">
-      
-      <div class="listing_title">2020</div>
-      <div class="listing">
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/why-automatic-route-mapping-is-not-desirable/">为什么自动映射路由不可取</a>
-            <div class="post_time"><span class="date">05-21</span></div>
-          </div>
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/why-automatic-route-mapping-is-not-desirable/'>为什么自动映射路由不可取</a></h2>
+          <span class="date">2020.05.21</span>
         </div>
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/scale-picture-by-maximum-aspect-ratio/">指定最大宽高，按比例缩放图片</a>
-            <div class="post_time"><span class="date">01-10</span></div>
-          </div>
+        <div class="post_content markdown"><p>在很多地方看到人们抱怨<code>Laravel</code>或者<code>Symfony</code>一类的框架定义路由麻烦；根据我的观察，这好像是<code>PHP</code>特有的一个现象。</p>
+<p>诚然，<code>PHP</code>没有像<code>Java</code>注解或<code>Python</code>装饰器一类的特性（至于用<code>PHP</code>注释去模拟的注解，我始终觉得透着一股邪性）让人很方便地去定义路由，但这种显式地绑定路由和方法我也没有觉得有多麻烦。</p>
+<p>在较早的php原生开发的时期，人们直接去访问php或者静态文件；后来有了 <a href="https://github.com/bcit-ci/CodeIgniter">Codeigniter</a> 一类的<code>MVC</code>框架。这类框架带来了一种设计在<code>PHP</code>圈影响深远，即<code>URL</code>的<code>path</code>部分由<code>控制器名/方法名</code>自动映射而来。如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class DemoController {
+    public function indexAction()
+    {
+        ...
+    }
+}
+</code></pre></div><p>上面这段代码所映射成路由就会是这样：&ldquo;http://host/demo/index&rdquo;。这好像让部分<code>PHPer</code>形成了一个&quot;路由本来就该是这样的&quot;的认知，对于这种认知我个人有不同的看法。</p>
+<p>我们先来认真了解一下，什么是<code>URL</code>?
+<code>URL</code> 即 Uniform Resource Locator，<a href="https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6">统一资源定位符</a>。从维基百科上它的定义看来，它的完整格式是这样的：</p>
+<p><code>[协议类型]://[访问资源需要的凭证信息]@[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID]</code></p>
+<p>其中和路由相关的<code>path</code>的定义是”资源层级UNIX文件路径“，它和”路由器/方法“的映射是没有直接关系的。尽管现在对”计算机资源“的定义已经十分宽泛，但从实体关系上来说，”路由器+方法“自动映射的方式是不能完整描述文件路径的，这是其一。</p>
+<p>其次，随着像<code>RESTful</code>一类架构风格的出现，”路由器+方法“自动映射的方式，恐怕也很难实现<code>RESTful</code>风格的路由。</p>
+<p>再次，”路由器+方法“自动映射两级的路径，就算再加上模块划分也只有三级的路径，在语义上是很呆板的，无法描述稍微复杂的语义。</p></div>
+        <div class="post_footer">
+          
         </div>
-        
       </div>
       
-      <div class="listing_title">2019</div>
-      <div class="listing">
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/springboot-jpa-config-durid/">springboot &#43; spring-data-jpa整合druid</a>
-            <div class="post_time"><span class="date">12-12</span></div>
-          </div>
-        </div>
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/merge-image-use-php-imagick/">使用PHP Imagick进行拼图</a>
-            <div class="post_time"><span class="date">09-25</span></div>
-          </div>
-        </div>
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/segmentation-fault-with-curl-openssl/">curl-openssl包引起的 PHP curl segmentation fault</a>
-            <div class="post_time"><span class="date">07-17</span></div>
-          </div>
-        </div>
-        
-      </div>
-      
-      <div class="listing_title">2017</div>
-      <div class="listing">
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/set-alpine-timezone-right-way/">如何正确设置docker alpine镜像的时区</a>
-            <div class="post_time"><span class="date">05-16</span></div>
-          </div>
-        </div>
-        
-      </div>
-      
-      <div class="listing_title">2014</div>
-      <div class="listing">
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/xue-jian-tu-long/">我和校花之间的故事 - 《血剑屠龙》</a>
-            <div class="post_time"><span class="date">10-07</span></div>
-          </div>
-        </div>
-        
-        <div class="listing_item">
-          <div class="listing_post">
-            <a href="/posts/start-from-here/">Start From Here</a>
-            <div class="post_time"><span class="date">09-25</span></div>
-          </div>
-        </div>
-        
-      </div>
       
     </div>
-    <div class="pagination"></div>
   </div>
   <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
 </div>

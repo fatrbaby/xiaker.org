@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn" >
 <head>
-	<meta name="generator" content="Hugo 0.70.0" />
+	<meta name="generator" content="Hugo 0.71.0" />
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -110,6 +110,51 @@
   <div class="content">
     
 
+
+<div class="post animated fadeInDown">
+  <div class="post_title">
+    <h2><a href='/posts/segmentation-fault-with-curl-openssl/'>curl-openssl包引起的 PHP curl segmentation fault</a></h2>
+  </div>
+  
+  <div class="list">
+    <div class="post_content markdown">
+      <p><p>最近偶然发现本地的PHP环境在使用CURL请求https的地址时，会抛出一个segmentation fault错误；工作这么久的我第一次遇到这个问题顿时吓到尿崩。马上开始Google搜索解决方案。我本地是MacOS使用Homebrew安装的php7.2，brew自动处理依赖安装了curl-openssl。最常被提到的解决方案就是开启<code>coredump</code>，使用gdb分析日志。但由于在Mac上我一直没能找到写下的日志，所以只能作罢。后来我找到了这个<a href="https://github.com/Homebrew/homebrew-core/issues/40812">issue</a>，根据这个issue里所说，我先使用<code>brew uninstall --ignore-dependencies curl-openssl</code>卸载了<code>curl-openssl</code>包，这个时候程序可以正常运行了，好像php也没有一定依赖这个包，然后安装了其他版本的<code>curl-openssl</code>，这个问题得到了解决。</p>......</p>
+    </div>
+  </div>
+  
+  <div class="post_footer">
+    <div class="meta">
+      <div class="info">
+        <span class="field">
+          <i class="remixicon-map-pin-time-line"></i>
+          <span class="date">2019.07.17</span>
+        </span>
+        
+        <span class="field tags">
+          <i class="remixicon-stack-line"></i>
+          
+          <a href="http://xiaker.org/tags/fatrbaby/">fatrbaby</a>
+          
+          <a href="http://xiaker.org/tags/%E4%BA%8C%E9%93%BE%E5%AD%90%E5%92%8C%E7%BB%95/">二链子和绕</a>
+          
+          <a href="http://xiaker.org/tags/%E6%B1%9F%E6%B9%96%E5%A4%9C%E9%9B%A8%E5%8D%81%E5%B9%B4%E7%81%AF/">江湖夜雨十年灯</a>
+          
+          <a href="http://xiaker.org/tags/%E9%BE%9F/">龟</a>
+          
+          <a href="http://xiaker.org/tags/%E7%88%AC%E5%AE%A0/">爬宠</a>
+          
+          <a href="http://xiaker.org/tags/php/">PHP</a>
+          
+          <a href="http://xiaker.org/tags/java/">Java</a>
+          
+          <a href="http://xiaker.org/tags/golang/">golang</a>
+          
+        </span>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="post animated fadeInDown">
   <div class="post_title">
