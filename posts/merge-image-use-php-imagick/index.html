@@ -115,32 +115,32 @@
         </div>
         <div class="post_content markdown"><p>最近处理一个需求，需要从CDN Down大量的图片进行拼接，再转换成PDF。这类工作PHP不是很擅长，但还好这不是一个长期使用且需要一定并发数的任务，为了操作数据库方便，还是使用PHP来完成这项任务。</p>
 <p>在拼接的时候，部分图片拼接后高度的值太大，那么这个操作会失败；想来想去只能将图片拼成三列以减少其高度。在互联网上关于<code>imagick extension</code>并不丰富的资料中，我还是找到了一块代码片段，写出了下面的代码：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">use Imagick;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">Imagick</span>;
 
-// blob array
-$files = [...];
+<span style="color:#75715e">// blob array
+</span><span style="color:#75715e"></span>$files <span style="color:#f92672">=</span> [<span style="color:#f92672">...</span>];
 
-$images = array_chunk($files, 3);
-$canvas = new Imagick;
+$images <span style="color:#f92672">=</span> <span style="color:#a6e22e">array_chunk</span>($files, <span style="color:#ae81ff">3</span>);
+$canvas <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Imagick</span>;
 
-foreach ($images as $image) {
-    $row = new Imagick();
+<span style="color:#66d9ef">foreach</span> ($images <span style="color:#66d9ef">as</span> $image) {
+    $row <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Imagick</span>();
 
-    foreach ($image as $binary) {
-        $row-&gt;readImageBlob($binary);
+    <span style="color:#66d9ef">foreach</span> ($image <span style="color:#66d9ef">as</span> $binary) {
+        $row<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">readImageBlob</span>($binary);
     }
 
-    $row-&gt;resetIterator();
-    $combine = $row-&gt;appendImages(false);
-    $canvas-&gt;addImage($combine);
+    $row<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">resetIterator</span>();
+    $combine <span style="color:#f92672">=</span> $row<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">appendImages</span>(<span style="color:#66d9ef">false</span>);
+    $canvas<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">addImage</span>($combine);
 }
 
-$canvas-&gt;resetIterator();
-$content = $canvas-&gt;appendImages(true);
-$binary = $content-&gt;getImageBlob();
-$content-&gt;destroy();
+$canvas<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">resetIterator</span>();
+$content <span style="color:#f92672">=</span> $canvas<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">appendImages</span>(<span style="color:#66d9ef">true</span>);
+$binary <span style="color:#f92672">=</span> $content<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getImageBlob</span>();
+$content<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">destroy</span>();
 
-file_put_contents(&#39;combine.png&#39;, $binary);
+<span style="color:#a6e22e">file_put_contents</span>(<span style="color:#e6db74">&#39;combine.png&#39;</span>, $binary);
 
 </code></pre></div></div>
         <div class="post_footer">

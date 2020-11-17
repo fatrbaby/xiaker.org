@@ -186,43 +186,43 @@
 <span style="color:#f92672">&lt;/project&gt;</span>
 
 </code></pre></div><p><code>application.yml</code>相关配置</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">spring</span>:
-  <span style="color:#66d9ef">datasource</span>:
-    <span style="color:#66d9ef">url</span>: jdbc:mysql://host:port/database?serverTimezone=GMT
-    <span style="color:#66d9ef">username</span>: username
-    <span style="color:#66d9ef">password</span>: password
-    <span style="color:#66d9ef">driver-class-name</span>: com.mysql.cj.jdbc.Driver
-    <span style="color:#66d9ef">type</span>: com.alibaba.druid.pool.DruidDataSource
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">spring</span>:
+  <span style="color:#f92672">datasource</span>:
+    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">jdbc:mysql://host:port/database?serverTimezone=GMT</span>
+    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">username</span>
+    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">password</span>
+    <span style="color:#f92672">driver-class-name</span>: <span style="color:#ae81ff">com.mysql.cj.jdbc.Driver</span>
+    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">com.alibaba.druid.pool.DruidDataSource</span>
     <span style="color:#75715e"># 初始化连接池大小</span>
-    <span style="color:#66d9ef">initialSize</span>: <span style="color:#ae81ff">5</span>
-    <span style="color:#66d9ef">minIdle</span>: <span style="color:#ae81ff">5</span>
-    <span style="color:#66d9ef">maxActive</span>: <span style="color:#ae81ff">20</span>
+    <span style="color:#f92672">initialSize</span>: <span style="color:#ae81ff">5</span>
+    <span style="color:#f92672">minIdle</span>: <span style="color:#ae81ff">5</span>
+    <span style="color:#f92672">maxActive</span>: <span style="color:#ae81ff">20</span>
     <span style="color:#75715e"># 配置获取连接等待超时的时间</span>
-    <span style="color:#66d9ef">maxWait</span>: <span style="color:#ae81ff">60000</span>
+    <span style="color:#f92672">maxWait</span>: <span style="color:#ae81ff">60000</span>
     <span style="color:#75715e"># 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒</span>
-    <span style="color:#66d9ef">timeBetweenEvictionRunsMillis</span>: <span style="color:#ae81ff">60000</span>
+    <span style="color:#f92672">timeBetweenEvictionRunsMillis</span>: <span style="color:#ae81ff">60000</span>
     <span style="color:#75715e"># 配置一个连接在池中最小生存的时间，单位是毫秒</span>
-    <span style="color:#66d9ef">minEvictableIdleTimeMillis</span>: <span style="color:#ae81ff">300000</span>
+    <span style="color:#f92672">minEvictableIdleTimeMillis</span>: <span style="color:#ae81ff">300000</span>
     <span style="color:#75715e"># Oracle请使用select 1 from dual</span>
-    <span style="color:#66d9ef">validationQuery</span>: select <span style="color:#e6db74">&#39;x&#39;</span>
-    <span style="color:#66d9ef">testWhileIdle</span>: <span style="color:#66d9ef">true</span>
-    <span style="color:#66d9ef">testOnBorrow</span>: <span style="color:#66d9ef">true</span>
-    <span style="color:#66d9ef">testOnReturn</span>: <span style="color:#66d9ef">false</span>
+    <span style="color:#f92672">validationQuery</span>: <span style="color:#ae81ff">select &#39;x&#39;</span>
+    <span style="color:#f92672">testWhileIdle</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#f92672">testOnBorrow</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#f92672">testOnReturn</span>: <span style="color:#66d9ef">false</span>
     <span style="color:#75715e"># 打开PSCache，并且指定每个连接上PSCache的大小</span>
-    <span style="color:#66d9ef">poolPreparedStatements</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#f92672">poolPreparedStatements</span>: <span style="color:#66d9ef">true</span>
     <span style="color:#75715e"># 配置监控统计拦截的filters，去掉后监控界面sql无法统计，&#39;wall&#39;用于防火墙</span>
-    <span style="color:#66d9ef">filters</span>: stat,wall,slf4j
-    <span style="color:#66d9ef">maxPoolPreparedStatementPerConnectionSize</span>: <span style="color:#ae81ff">20</span>
+    <span style="color:#f92672">filters</span>: <span style="color:#ae81ff">stat,wall,slf4j</span>
+    <span style="color:#f92672">maxPoolPreparedStatementPerConnectionSize</span>: <span style="color:#ae81ff">20</span>
     <span style="color:#75715e"># 合并多个DruidDataSource的监控数据</span>
-    <span style="color:#66d9ef">useGlobalDataSourceStat</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#f92672">useGlobalDataSourceStat</span>: <span style="color:#66d9ef">true</span>
     <span style="color:#75715e"># 通过connectProperties属性来打开mergeSql功能；慢SQL记录</span>
-    <span style="color:#66d9ef">connectionProperties</span>: druid.stat.mergeSql=<span style="color:#66d9ef">true</span>;druid.stat.slowSqlMillis=<span style="color:#ae81ff">500</span>
-  <span style="color:#66d9ef">data</span>:
-    <span style="color:#66d9ef">jpa</span>:
-      <span style="color:#66d9ef">repositories</span>:
-        <span style="color:#66d9ef">enabled</span>: <span style="color:#66d9ef">true</span>
-<span style="color:#66d9ef">server</span>:
-  <span style="color:#66d9ef">port</span>: <span style="color:#ae81ff">9200</span>
+    <span style="color:#f92672">connectionProperties</span>: <span style="color:#ae81ff">druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500</span>
+  <span style="color:#f92672">data</span>:
+    <span style="color:#f92672">jpa</span>:
+      <span style="color:#f92672">repositories</span>:
+        <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+<span style="color:#f92672">server</span>:
+  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">9200</span>
 
 </code></pre></div><p>由于<code>application.xml</code>里的一些配置，<code>springboot</code>并不认识，所以要用一个类来解析：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> org.xiaker.bootstudy.config<span style="color:#f92672">;</span>

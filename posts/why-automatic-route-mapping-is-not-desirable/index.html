@@ -115,10 +115,10 @@
         <div class="post_content markdown"><p>在很多地方看到人们抱怨<code>Laravel</code>或者<code>Symfony</code>一类的框架定义路由麻烦；根据我的观察，这好像是<code>PHP</code>特有的一个现象。</p>
 <p>诚然，<code>PHP</code>没有像<code>Java</code>注解或<code>Python</code>装饰器一类的特性（至于用<code>PHP</code>注释去模拟的注解，我始终觉得透着一股邪性）让人很方便地去定义路由，但这种显式地绑定路由和方法我也没有觉得有多麻烦。</p>
 <p>在较早的php原生开发的时期，人们直接去访问php或者静态文件；后来有了 <a href="https://github.com/bcit-ci/CodeIgniter">Codeigniter</a> 一类的<code>MVC</code>框架。这类框架带来了一种设计在<code>PHP</code>圈影响深远，即<code>URL</code>的<code>path</code>部分由<code>控制器名/方法名</code>自动映射而来。如：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class DemoController {
-    public function indexAction()
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DemoController</span> {
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">indexAction</span>()
     {
-        ...
+        <span style="color:#f92672">...</span>
     }
 }
 </code></pre></div><p>上面这段代码所映射成路由就会是这样：&ldquo;http://host/demo/index&rdquo;。这好像让部分<code>PHPer</code>形成了一个&quot;路由本来就该是这样的&quot;的认知，对于这种认知我个人有不同的看法。</p>

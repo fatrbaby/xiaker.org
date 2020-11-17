@@ -6,10 +6,15 @@
     <description>Recent content on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 29 Dec 2018 20:24:28 +0800</lastBuildDate>
-    
-	<atom:link href="http://xiaker.org/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 17 Nov 2020 20:59:33 +0800</lastBuildDate><atom:link href="http://xiaker.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP生成器实现协程任务调度</title>
+      <link>http://xiaker.org/posts/implements-coroutine-task-scheduling-by-php-generator/</link>
+      <pubDate>Tue, 17 Nov 2020 20:59:33 +0800</pubDate>
+      
+      <guid>http://xiaker.org/posts/implements-coroutine-task-scheduling-by-php-generator/</guid>
+      <description>&lt;p&gt;本文是根据我在公司内部分享内容整理而来。很久没有写过博客了，为了讲清楚这个协程调度，我还是花了不少功夫，所以把它记录下来。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>为什么自动映射路由不可取</title>
