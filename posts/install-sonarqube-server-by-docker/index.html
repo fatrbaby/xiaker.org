@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-cn" >
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  
+  <meta name="author"
+        content="fatrbaby"/>
+
+  
+  <meta name="description" content="SonarQube 是一款代码质量管理工具，在国内有大量拥趸。本文仅记述通过docker-compose安装其社区版的方法，不对其本身的分析能力做评述。
+为了偷懒和方便测试，我们先编写一个Makefile。
+.PHONY : clean mkdir: mkdir -p &amp;#34;data/postgres/data&amp;#34; mkdir -p &amp;#34;data/postgres/postgresql&amp;#34; mkdir -p &amp;#34;data/postgres/postgresql&amp;#34; mkdir -p &amp;#34;data/sonarqube/conf&amp;#34; mkdir -p &amp;#34;data/sonarqube/data&amp;#34; mkdir -p &amp;#34;data/sonarqube/extensions&amp;#34; mkdir -p &amp;#34;data/sonarqube/logs&amp;#34; clean: rm -rf ./data/postgres/data/* rm -rf ./data/postgres/postgresql/* rm -rf ./data/sonarqube/data/* rm -rf ./data/sonarqube/extensions/* rm -rf ./data/sonarqube/logs/* "/>
+  
+
+  
+  
+  <meta name="keywords" content="fatrbaby, 二链子和绕, 江湖夜雨十年灯, 龟, 爬宠, PHP, Java, golang"/>
+  
+
+  
+  <link rel="canonical" href="http://xiaker.org/posts/install-sonarqube-server-by-docker/"/>
+
+  
+
+  <title>通过docker部署SonarQube &middot; 江湖夜雨十年灯</title>
+
+  <link rel="shortcut icon" href="http://xiaker.org/images/favicon.ico"/>
+  <link rel="stylesheet" href="http://xiaker.org/css/animate.min.css"/>
+  <link rel="stylesheet" href="http://xiaker.org/css/remixicon.css"/>
+  <link rel="stylesheet" href="http://xiaker.org/css/zozo.css"/>
+  <link rel="stylesheet" href="http://xiaker.org/css/highlight.css"/>
+
+  
+  
+</head>
+
+<body>
+<div class="main animated">
+  <div class="nav_container animated fadeInDown">
+  <div class="site_nav" id="site_nav">
+    <ul>
+      
+      <li>
+        <a href="/">首页</a>
+      </li>
+      
+      <li>
+        <a href="/posts/">归档</a>
+      </li>
+      
+      <li>
+        <a href="/tags/">标签</a>
+      </li>
+      
+      <li>
+        <a href="/about/">关于</a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="menu_icon">
+    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+  </div>
+</div>
+
+  <div class="header animated fadeInDown">
+  <div class="site_title_container">
+    <div class="site_title">
+      <h1>
+        <a href="http://xiaker.org">
+          <span>江湖夜雨十年灯</span>
+          <img src="http://xiaker.org/images/logo.svg"/>
+        </a>
+      </h1>
+    </div>
+    <div class="description">
+      <p class="sub_title">仗剑江湖载酒行</p>
+      <div class="my_socials">
+        
+        
+        <a href="%20" title="facebook" target="_blank"><i class="remixicon-facebook-fill"></i></a>
+        
+        
+        
+        <a href="https://github.com/fatrbaby" title="github" target="_blank"><i class="remixicon-github-fill"></i></a>
+        
+        
+        
+        <a href="%20" title="instagram" target="_blank"><i class="remixicon-instagram-fill"></i></a>
+        
+        
+        
+        <a href="%20" title="twitter" target="_blank"><i class="remixicon-twitter-fill"></i></a>
+        
+        
+        
+        <a href="https://weibo.com/fatrbaby" title="weibo" target="_blank"><i class="remixicon-weibo-fill"></i></a>
+        
+        
+        <a href="http://xiaker.org/index.xml" type="application/rss+xml" title="rss" target="_blank"><i class="remixicon-rss-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="content">
+    <div class="post_page">
+      <div class="post animated fadeInDown">
+        <div class="post_title post_detail_title">
+          <h2><a href='/posts/install-sonarqube-server-by-docker/'>通过docker部署SonarQube</a></h2>
+          <span class="date">2020.11.24</span>
+        </div>
+        <div class="post_content markdown"><p><code>SonarQube</code> 是一款代码质量管理工具，在国内有大量拥趸。本文仅记述通过<code>docker-compose</code>安装其社区版的方法，不对其本身的分析能力做评述。</p>
+<p>为了偷懒和方便测试，我们先编写一个<code>Makefile</code>。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">.PHONY : clean
+
+mkdir:
+	mkdir -p <span style="color:#e6db74">&#34;data/postgres/data&#34;</span>
+	mkdir -p <span style="color:#e6db74">&#34;data/postgres/postgresql&#34;</span>
+	mkdir -p <span style="color:#e6db74">&#34;data/postgres/postgresql&#34;</span>
+	mkdir -p <span style="color:#e6db74">&#34;data/sonarqube/conf&#34;</span>
+	mkdir -p <span style="color:#e6db74">&#34;data/sonarqube/data&#34;</span>
+	mkdir -p <span style="color:#e6db74">&#34;data/sonarqube/extensions&#34;</span>
+	mkdir -p <span style="color:#e6db74">&#34;data/sonarqube/logs&#34;</span>
+
+clean:
+	rm -rf ./data/postgres/data/*
+	rm -rf ./data/postgres/postgresql/*
+	rm -rf ./data/sonarqube/data/*
+	rm -rf ./data/sonarqube/extensions/*
+	rm -rf ./data/sonarqube/logs/*
+</code></pre></div><p>运行<code>make</code>命令，初始化好我们需要挂载的本地目录。在相同的目录下，创建<code>docker-compose.yml</code>文件，并写入以下内容：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3&#39;</span>
+
+<span style="color:#f92672">services</span>:
+  <span style="color:#f92672">postgres</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#39;postgres:12-alpine&#39;</span>
+    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">always</span>
+    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">postgres</span>
+    <span style="color:#f92672">volumes</span>:
+      - <span style="color:#ae81ff">./data/postgres/postgresql/:/var/lib/postgresql</span>
+      - <span style="color:#ae81ff">./data/postgres/data/:/var/lib/postgresql/data</span>
+    <span style="color:#f92672">environment</span>:
+      <span style="color:#f92672">TZ</span>: <span style="color:#ae81ff">Asia/Shanghai</span>
+      <span style="color:#f92672">POSTGRES_USER</span>: <span style="color:#ae81ff">sonar</span>
+      <span style="color:#f92672">POSTGRES_PASSWORD</span>: <span style="color:#ae81ff">sonar</span>
+      <span style="color:#f92672">POSTGRES_DB</span>: <span style="color:#ae81ff">sonar</span>
+
+  <span style="color:#f92672">sonar</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#e6db74">&#39;sonarqube:8.5-community&#39;</span>
+    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">sonar</span>
+    <span style="color:#f92672">depends_on</span>:
+      - <span style="color:#ae81ff">postgres</span>
+    <span style="color:#f92672">volumes</span>:
+      - <span style="color:#ae81ff">./data/sonarqube/extensions:/opt/sonarqube/extensions</span>
+      - <span style="color:#ae81ff">./data/sonarqube/logs:/opt/sonarqube/logs</span>
+      - <span style="color:#ae81ff">./data/sonarqube/data:/opt/sonarqube/data</span>
+      - <span style="color:#ae81ff">./data/sonarqube/conf:/opt/sonarqube/conf</span>
+    <span style="color:#f92672">ports</span>:
+      - <span style="color:#ae81ff">9000</span>:<span style="color:#ae81ff">9000</span>
+    <span style="color:#f92672">environment</span>:
+      <span style="color:#f92672">SONARQUBE_JDBC_USERNAME</span>: <span style="color:#ae81ff">sonar</span>
+      <span style="color:#f92672">SONARQUBE_JDBC_PASSWORD</span>: <span style="color:#ae81ff">sonar</span>
+      <span style="color:#f92672">SONARQUBE_JDBC_URL</span>: <span style="color:#ae81ff">jdbc:postgresql://postgres:5432/sonar</span>
+</code></pre></div><p>运行<code>docker-compose up -d</code>，安装整个<code>SonarQube</code>和其依赖的服务镜像。如果销毁这些容器后，可以运行<code>make clean</code>命令，清除资源。</p></div>
+        <div class="post_footer">
+          
+          <div class="meta">
+            <div class="info">
+              <span class="field tags">
+                <i class="remixicon-stack-line"></i>
+                
+                <a href="http://xiaker.org/tags/sonarqube/">SonarQube</a>
+                
+                <a href="http://xiaker.org/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/">单元测试</a>
+                
+                <a href="http://xiaker.org/tags/docker/">docker</a>
+                
+                <a href="http://xiaker.org/tags/docker-compose/">docker compose</a>
+                
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <a id="back_to_top" href="#" class="back_to_top"><span>△</span></a>
+</div>
+<footer class="footer">
+  <div class="powered_by">
+    <a href="https://zeuk.me">Designed by Zeuk,</a>
+    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+  </div>
+
+  <div class="footer_slogan">
+    <span>仗剑江湖载酒行</span>
+  </div>
+</footer>
+
+
+
+<script src="http://xiaker.org/js/jquery-3.3.1.min.js"></script>
+<script src="http://xiaker.org/js/zozo.js"></script>
+<script src="http://xiaker.org/js/highlight.pack.js"></script>
+<link  href="http://xiaker.org/css/fancybox.min.css" rel="stylesheet">
+<script src="http://xiaker.org/js/fancybox.min.js"></script>
+
+<script>hljs.initHighlightingOnLoad()</script>
+
+
+  <script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+</body>
+</html>

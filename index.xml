@@ -6,7 +6,35 @@
     <description>Recent content on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Nov 2020 20:59:33 +0800</lastBuildDate><atom:link href="http://xiaker.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Nov 2020 18:26:09 +0800</lastBuildDate><atom:link href="http://xiaker.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>通过docker部署SonarQube</title>
+      <link>http://xiaker.org/posts/install-sonarqube-server-by-docker/</link>
+      <pubDate>Tue, 24 Nov 2020 18:26:09 +0800</pubDate>
+      
+      <guid>http://xiaker.org/posts/install-sonarqube-server-by-docker/</guid>
+      <description>&lt;p&gt;&lt;code&gt;SonarQube&lt;/code&gt; 是一款代码质量管理工具，在国内有大量拥趸。本文仅记述通过&lt;code&gt;docker-compose&lt;/code&gt;安装其社区版的方法，不对其本身的分析能力做评述。&lt;/p&gt;
+&lt;p&gt;为了偷懒和方便测试，我们先编写一个&lt;code&gt;Makefile&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;.PHONY : clean
+
+mkdir:
+	mkdir -p &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;data/postgres/data&amp;#34;&lt;/span&gt;
+	mkdir -p &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;data/postgres/postgresql&amp;#34;&lt;/span&gt;
+	mkdir -p &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;data/postgres/postgresql&amp;#34;&lt;/span&gt;
+	mkdir -p &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;data/sonarqube/conf&amp;#34;&lt;/span&gt;
+	mkdir -p &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;data/sonarqube/data&amp;#34;&lt;/span&gt;
+	mkdir -p &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;data/sonarqube/extensions&amp;#34;&lt;/span&gt;
+	mkdir -p &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;data/sonarqube/logs&amp;#34;&lt;/span&gt;
+
+clean:
+	rm -rf ./data/postgres/data/*
+	rm -rf ./data/postgres/postgresql/*
+	rm -rf ./data/sonarqube/data/*
+	rm -rf ./data/sonarqube/extensions/*
+	rm -rf ./data/sonarqube/logs/*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
     <item>
       <title>PHP生成器实现协程任务调度</title>
       <link>http://xiaker.org/posts/implements-coroutine-task-scheduling-by-php-generator/</link>
