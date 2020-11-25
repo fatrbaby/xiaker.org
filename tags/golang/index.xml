@@ -13,7 +13,7 @@
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>http://xiaker.org/posts/scale-picture-by-maximum-aspect-ratio/</guid>
-      <description>&lt;p&gt;有时候啊，可能要限制图片的尺寸在一定的范围内，又不能改变图片的形状，以下方法能根据最大宽高，按比例算出新的宽高。&lt;/p&gt;</description>
+      <description>&lt;p&gt;这次处理图片，要限制图片的尺寸在一定的范围内，又不能改变图片的形状（保持宽高比）。&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -10,7 +10,7 @@
         content="fatrbaby"/>
 
   
-  <meta name="description" content="有时候啊，可能要限制图片的尺寸在一定的范围内，又不能改变图片的形状，以下方法能根据最大宽高，按比例算出新的宽高。
+  <meta name="description" content="这次处理图片，要限制图片的尺寸在一定的范围内，又不能改变图片的形状（保持宽高比）。
 "/>
   
 
@@ -112,11 +112,11 @@
           <h2><a href='/posts/scale-picture-by-maximum-aspect-ratio/'>指定最大宽高，按比例缩放图片</a></h2>
           <span class="date">2020.01.10</span>
         </div>
-        <div class="post_content markdown"><p>有时候啊，可能要限制图片的尺寸在一定的范围内，又不能改变图片的形状，以下方法能根据最大宽高，按比例算出新的宽高。</p>
+        <div class="post_content markdown"><p>这次处理图片，要限制图片的尺寸在一定的范围内，又不能改变图片的形状（保持宽高比）。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">// 根据最大宽高来计算缩略图尺寸
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scaling_size</span>($width, $height)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">scaling_size</span>($width, $height, $max <span style="color:#f92672">=</span> <span style="color:#ae81ff">1024</span>)
 {
-    $maxWidth <span style="color:#f92672">=</span> $maxHeight <span style="color:#f92672">=</span> <span style="color:#ae81ff">1024</span>;
+    $maxWidth <span style="color:#f92672">=</span> $maxHeight <span style="color:#f92672">=</span> $max;
 
     <span style="color:#75715e">// 缩略图最大宽度与最大高度比
 </span><span style="color:#75715e"></span>    $maxRatio <span style="color:#f92672">=</span> $maxWidth <span style="color:#f92672">/</span> $maxHeight;
@@ -131,7 +131,7 @@
         $newWidth <span style="color:#f92672">=</span> $maxHeight <span style="color:#f92672">*</span> $ratio;
     }
 
-    <span style="color:#66d9ef">return</span> [$newWidth, $newHeight];
+    <span style="color:#66d9ef">return</span> [(<span style="color:#a6e22e">int</span>) $newWidth, (<span style="color:#a6e22e">int</span>) $newHeight];
 }
 
 </code></pre></div></div>
