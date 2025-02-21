@@ -3,137 +3,137 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://xiaker.org/tags/docker/</loc>
+    <loc>http://xiaker.net/tags/docker/</loc>
     <lastmod>2020-11-24T18:26:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/docker-compose/</loc>
+    <loc>http://xiaker.net/tags/docker-compose/</loc>
     <lastmod>2020-11-24T18:26:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/</loc>
+    <loc>http://xiaker.net/posts/</loc>
     <lastmod>2020-11-24T18:26:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/sonarqube/</loc>
+    <loc>http://xiaker.net/tags/sonarqube/</loc>
     <lastmod>2020-11-24T18:26:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/</loc>
+    <loc>http://xiaker.net/tags/</loc>
     <lastmod>2020-11-24T18:26:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://xiaker.net/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2020-11-24T18:26:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/</loc>
+    <loc>http://xiaker.net/</loc>
     <lastmod>2020-11-24T18:26:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/install-sonarqube-server-by-docker/</loc>
+    <loc>http://xiaker.net/posts/install-sonarqube-server-by-docker/</loc>
     <lastmod>2020-11-24T18:26:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/implements-coroutine-task-scheduling-by-php-generator/</loc>
+    <loc>http://xiaker.net/posts/implements-coroutine-task-scheduling-by-php-generator/</loc>
     <lastmod>2020-11-17T20:59:33+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/why-automatic-route-mapping-is-not-desirable/</loc>
+    <loc>http://xiaker.net/posts/why-automatic-route-mapping-is-not-desirable/</loc>
     <lastmod>2020-05-21T11:02:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/fatrbaby/</loc>
+    <loc>http://xiaker.net/tags/fatrbaby/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/golang/</loc>
+    <loc>http://xiaker.net/tags/golang/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/java/</loc>
+    <loc>http://xiaker.net/tags/java/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/php/</loc>
+    <loc>http://xiaker.net/tags/php/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/%E4%BA%8C%E9%93%BE%E5%AD%90%E5%92%8C%E7%BB%95/</loc>
+    <loc>http://xiaker.net/tags/%E4%BA%8C%E9%93%BE%E5%AD%90%E5%92%8C%E7%BB%95/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/scale-picture-by-maximum-aspect-ratio/</loc>
+    <loc>http://xiaker.net/posts/scale-picture-by-maximum-aspect-ratio/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/%E6%B1%9F%E6%B9%96%E5%A4%9C%E9%9B%A8%E5%8D%81%E5%B9%B4%E7%81%AF/</loc>
+    <loc>http://xiaker.net/tags/%E6%B1%9F%E6%B9%96%E5%A4%9C%E9%9B%A8%E5%8D%81%E5%B9%B4%E7%81%AF/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/%E7%88%AC%E5%AE%A0/</loc>
+    <loc>http://xiaker.net/tags/%E7%88%AC%E5%AE%A0/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/tags/%E9%BE%9F/</loc>
+    <loc>http://xiaker.net/tags/%E9%BE%9F/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/springboot-jpa-config-durid/</loc>
+    <loc>http://xiaker.net/posts/springboot-jpa-config-durid/</loc>
     <lastmod>2019-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/merge-image-use-php-imagick/</loc>
+    <loc>http://xiaker.net/posts/merge-image-use-php-imagick/</loc>
     <lastmod>2019-09-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/segmentation-fault-with-curl-openssl/</loc>
+    <loc>http://xiaker.net/posts/segmentation-fault-with-curl-openssl/</loc>
     <lastmod>2019-07-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/about/</loc>
+    <loc>http://xiaker.net/about/</loc>
     <lastmod>2018-12-29T20:24:28+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/set-alpine-timezone-right-way/</loc>
+    <loc>http://xiaker.net/posts/set-alpine-timezone-right-way/</loc>
     <lastmod>2017-05-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/xue-jian-tu-long/</loc>
+    <loc>http://xiaker.net/posts/xue-jian-tu-long/</loc>
     <lastmod>2014-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/posts/start-from-here/</loc>
+    <loc>http://xiaker.net/posts/start-from-here/</loc>
     <lastmod>2014-09-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://xiaker.org/categories/</loc>
+    <loc>http://xiaker.net/categories/</loc>
   </url>
   
 </urlset>

@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on 江湖夜雨十年灯</title>
-    <link>http://xiaker.org/tags/java/</link>
+    <link>http://xiaker.net/tags/java/</link>
     <description>Recent content in Java on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://xiaker.org/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://xiaker.net/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>指定最大宽高，按比例缩放图片</title>
-      <link>http://xiaker.org/posts/scale-picture-by-maximum-aspect-ratio/</link>
+      <link>http://xiaker.net/posts/scale-picture-by-maximum-aspect-ratio/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/posts/scale-picture-by-maximum-aspect-ratio/</guid>
+      <guid>http://xiaker.net/posts/scale-picture-by-maximum-aspect-ratio/</guid>
       <description>&lt;p&gt;这次处理图片，要限制图片的尺寸在一定的范围内，又不能改变图片的形状（保持宽高比）。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>springboot &#43; spring-data-jpa整合druid</title>
-      <link>http://xiaker.org/posts/springboot-jpa-config-durid/</link>
+      <link>http://xiaker.net/posts/springboot-jpa-config-durid/</link>
       <pubDate>Thu, 12 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/posts/springboot-jpa-config-durid/</guid>
+      <guid>http://xiaker.net/posts/springboot-jpa-config-durid/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;这篇博文记录得较早，只是发得较晚。现而今眼目下，&lt;code&gt;druid&lt;/code&gt;已经有了官方&lt;a href=&#34;https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter&#34;&gt;&lt;code&gt;starter&lt;/code&gt;&lt;/a&gt;，很是方便。所以大家看看原理就好。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -30,48 +30,48 @@
     
     <item>
       <title>使用PHP Imagick进行拼图</title>
-      <link>http://xiaker.org/posts/merge-image-use-php-imagick/</link>
+      <link>http://xiaker.net/posts/merge-image-use-php-imagick/</link>
       <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/posts/merge-image-use-php-imagick/</guid>
+      <guid>http://xiaker.net/posts/merge-image-use-php-imagick/</guid>
       <description>&lt;p&gt;最近处理一个需求，需要从CDN Down大量的图片进行拼接，再转换成PDF。这类工作PHP不是很擅长，但还好这不是一个长期使用且需要一定并发数的任务，为了操作数据库方便，还是使用PHP来完成这项任务。&lt;/p&gt;
 &lt;p&gt;在拼接的时候，部分图片拼接后高度的值太大，那么这个操作会失败；想来想去只能将图片拼成三列以减少其高度。在互联网上关于&lt;code&gt;imagick extension&lt;/code&gt;并不丰富的资料中，我还是找到了一块代码片段，写出了下面的代码：&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>curl-openssl包引起的 PHP curl segmentation fault</title>
-      <link>http://xiaker.org/posts/segmentation-fault-with-curl-openssl/</link>
+      <link>http://xiaker.net/posts/segmentation-fault-with-curl-openssl/</link>
       <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/posts/segmentation-fault-with-curl-openssl/</guid>
+      <guid>http://xiaker.net/posts/segmentation-fault-with-curl-openssl/</guid>
       <description>&lt;p&gt;最近偶然发现本地的PHP环境在使用CURL请求https的地址时，会抛出一个segmentation fault错误；工作这么久的我第一次遇到这个问题顿时吓到尿崩。马上开始Google搜索解决方案。我本地是MacOS使用Homebrew安装的php7.2，brew自动处理依赖安装了curl-openssl。最常被提到的解决方案就是开启&lt;code&gt;coredump&lt;/code&gt;，使用gdb分析日志。但由于在Mac上我一直没能找到写下的日志，所以只能作罢。后来我找到了这个&lt;a href=&#34;https://github.com/Homebrew/homebrew-core/issues/40812&#34;&gt;issue&lt;/a&gt;，根据这个issue里所说，我先使用&lt;code&gt;brew uninstall --ignore-dependencies curl-openssl&lt;/code&gt;卸载了&lt;code&gt;curl-openssl&lt;/code&gt;包，这个时候程序可以正常运行了，好像php也没有一定依赖这个包，然后安装了其他版本的&lt;code&gt;curl-openssl&lt;/code&gt;，这个问题得到了解决。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>如何正确设置docker alpine镜像的时区</title>
-      <link>http://xiaker.org/posts/set-alpine-timezone-right-way/</link>
+      <link>http://xiaker.net/posts/set-alpine-timezone-right-way/</link>
       <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/posts/set-alpine-timezone-right-way/</guid>
+      <guid>http://xiaker.net/posts/set-alpine-timezone-right-way/</guid>
       <description>&lt;p&gt;前段时间构建一个基于oprenresty的项目，使用了openresty官方的docker镜像。&lt;/p&gt;
 &lt;p&gt;不得不说，docker和openresty都是好东西。openresty的官方镜像默认版本使用的基础镜像是alpine，不得不说alpine也是个好东西。在其他如ubuntu、centos镜像动辄几百M的体积下，只有5M的alpine简直是一股清流。对于我这种128SSD用户来说简直是福音。虽说docker的image是分层的，可以共用某些层，所使用的空间不一定有显示的那么大，但见到只有一位数的显示，心里总会踏实一些。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>我和校花之间的故事 - 《血剑屠龙》</title>
-      <link>http://xiaker.org/posts/xue-jian-tu-long/</link>
+      <link>http://xiaker.net/posts/xue-jian-tu-long/</link>
       <pubDate>Tue, 07 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/posts/xue-jian-tu-long/</guid>
+      <guid>http://xiaker.net/posts/xue-jian-tu-long/</guid>
       <description>&lt;p&gt;很多年以前，当我还是小学生的时候，我们学校有两大校花，我称呼她们为“陈校花”和“张校花”。虽然我对张校花十分感兴趣，但我跟陈校花的关系更好。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Start From Here</title>
-      <link>http://xiaker.org/posts/start-from-here/</link>
+      <link>http://xiaker.net/posts/start-from-here/</link>
       <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/posts/start-from-here/</guid>
+      <guid>http://xiaker.net/posts/start-from-here/</guid>
       <description>&lt;p&gt;行行重行行，朝朝复朝朝。&lt;/p&gt;
 &lt;p&gt;做技术也有好几年了，其间每每有”顿悟”的时候，就想把他记录下来：一是告知世人，我又顿悟了，我屌爆了； 二是我不能确定我的大脑是否能永远记住这些东西。&lt;/p&gt;</description>
     </item>

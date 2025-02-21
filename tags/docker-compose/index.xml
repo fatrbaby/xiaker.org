@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker compose on 江湖夜雨十年灯</title>
-    <link>http://xiaker.org/tags/docker-compose/</link>
+    <link>http://xiaker.net/tags/docker-compose/</link>
     <description>Recent content in docker compose on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 24 Nov 2020 18:26:09 +0800</lastBuildDate><atom:link href="http://xiaker.org/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Nov 2020 18:26:09 +0800</lastBuildDate><atom:link href="http://xiaker.net/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>通过docker部署SonarQube</title>
-      <link>http://xiaker.org/posts/install-sonarqube-server-by-docker/</link>
+      <link>http://xiaker.net/posts/install-sonarqube-server-by-docker/</link>
       <pubDate>Tue, 24 Nov 2020 18:26:09 +0800</pubDate>
       
-      <guid>http://xiaker.org/posts/install-sonarqube-server-by-docker/</guid>
+      <guid>http://xiaker.net/posts/install-sonarqube-server-by-docker/</guid>
       <description>&lt;p&gt;&lt;code&gt;SonarQube&lt;/code&gt; 是一款代码质量管理工具，在国内有大量拥趸。本文仅记述通过&lt;code&gt;docker-compose&lt;/code&gt;安装其社区版的方法，不对其本身的分析能力做评述。&lt;/p&gt;
 &lt;p&gt;为了偷懒和方便测试，我们先编写一个&lt;code&gt;Makefile&lt;/code&gt;。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;.PHONY : clean

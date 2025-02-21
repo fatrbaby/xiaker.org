@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>时区 on 江湖夜雨十年灯</title>
-    <link>http://xiaker.org/tags/%E6%97%B6%E5%8C%BA/</link>
+    <link>http://xiaker.net/tags/%E6%97%B6%E5%8C%BA/</link>
     <description>Recent content in 时区 on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 16 May 2017 09:54:53 +0800</lastBuildDate>
     
-	<atom:link href="http://xiaker.org/tags/%E6%97%B6%E5%8C%BA/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://xiaker.net/tags/%E6%97%B6%E5%8C%BA/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>如何正确设置docker alpine镜像的时区</title>
-      <link>http://xiaker.org/posts/set-alpine-timezone-right-way/</link>
+      <link>http://xiaker.net/posts/set-alpine-timezone-right-way/</link>
       <pubDate>Tue, 16 May 2017 09:54:53 +0800</pubDate>
       
-      <guid>http://xiaker.org/posts/set-alpine-timezone-right-way/</guid>
+      <guid>http://xiaker.net/posts/set-alpine-timezone-right-way/</guid>
       <description>前段时间构建一个基于oprenresty的项目，使用了openresty官方的docker镜像。 不得不说，docker和openresty都是好东西。openresty的官方镜像默认版本使用的基础镜像</description>
     </item>
     

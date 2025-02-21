@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>imagick on 江湖夜雨十年灯</title>
-    <link>http://xiaker.org/tags/imagick/</link>
+    <link>http://xiaker.net/tags/imagick/</link>
     <description>Recent content in imagick on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 25 Sep 2019 10:49:03 +0800</lastBuildDate>
     
-	<atom:link href="http://xiaker.org/tags/imagick/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://xiaker.net/tags/imagick/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用PHP Imagick进行拼图</title>
-      <link>http://xiaker.org/posts/merge-image-use-php-imagick/</link>
+      <link>http://xiaker.net/posts/merge-image-use-php-imagick/</link>
       <pubDate>Wed, 25 Sep 2019 10:49:03 +0800</pubDate>
       
-      <guid>http://xiaker.org/posts/merge-image-use-php-imagick/</guid>
+      <guid>http://xiaker.net/posts/merge-image-use-php-imagick/</guid>
       <description>最近处理一个需求，需要从CDN Down大量的图片进行拼接，再转换成PDF。这类工作PHP不是很擅长，但还好这不是一个长期使用且需要一定并发数的任务，为了操作数据库方便，还是使用PHP来完成这项任务。</description>
     </item>
     

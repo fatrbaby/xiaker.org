@@ -2,116 +2,116 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 江湖夜雨十年灯</title>
-    <link>http://xiaker.org/tags/</link>
+    <link>http://xiaker.net/tags/</link>
     <description>Recent content in Tags on 江湖夜雨十年灯</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 24 Nov 2020 18:26:09 +0800</lastBuildDate><atom:link href="http://xiaker.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Nov 2020 18:26:09 +0800</lastBuildDate><atom:link href="http://xiaker.net/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>docker</title>
-      <link>http://xiaker.org/tags/docker/</link>
+      <link>http://xiaker.net/tags/docker/</link>
       <pubDate>Tue, 24 Nov 2020 18:26:09 +0800</pubDate>
       
-      <guid>http://xiaker.org/tags/docker/</guid>
+      <guid>http://xiaker.net/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker compose</title>
-      <link>http://xiaker.org/tags/docker-compose/</link>
+      <link>http://xiaker.net/tags/docker-compose/</link>
       <pubDate>Tue, 24 Nov 2020 18:26:09 +0800</pubDate>
       
-      <guid>http://xiaker.org/tags/docker-compose/</guid>
+      <guid>http://xiaker.net/tags/docker-compose/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SonarQube</title>
-      <link>http://xiaker.org/tags/sonarqube/</link>
+      <link>http://xiaker.net/tags/sonarqube/</link>
       <pubDate>Tue, 24 Nov 2020 18:26:09 +0800</pubDate>
       
-      <guid>http://xiaker.org/tags/sonarqube/</guid>
+      <guid>http://xiaker.net/tags/sonarqube/</guid>
       <description></description>
     </item>
     
     <item>
       <title>单元测试</title>
-      <link>http://xiaker.org/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
+      <link>http://xiaker.net/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Tue, 24 Nov 2020 18:26:09 +0800</pubDate>
       
-      <guid>http://xiaker.org/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</guid>
+      <guid>http://xiaker.net/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title>fatrbaby</title>
-      <link>http://xiaker.org/tags/fatrbaby/</link>
+      <link>http://xiaker.net/tags/fatrbaby/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/tags/fatrbaby/</guid>
+      <guid>http://xiaker.net/tags/fatrbaby/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>http://xiaker.org/tags/golang/</link>
+      <link>http://xiaker.net/tags/golang/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/tags/golang/</guid>
+      <guid>http://xiaker.net/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>http://xiaker.org/tags/java/</link>
+      <link>http://xiaker.net/tags/java/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/tags/java/</guid>
+      <guid>http://xiaker.net/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PHP</title>
-      <link>http://xiaker.org/tags/php/</link>
+      <link>http://xiaker.net/tags/php/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/tags/php/</guid>
+      <guid>http://xiaker.net/tags/php/</guid>
       <description></description>
     </item>
     
     <item>
       <title>二链子和绕</title>
-      <link>http://xiaker.org/tags/%E4%BA%8C%E9%93%BE%E5%AD%90%E5%92%8C%E7%BB%95/</link>
+      <link>http://xiaker.net/tags/%E4%BA%8C%E9%93%BE%E5%AD%90%E5%92%8C%E7%BB%95/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/tags/%E4%BA%8C%E9%93%BE%E5%AD%90%E5%92%8C%E7%BB%95/</guid>
+      <guid>http://xiaker.net/tags/%E4%BA%8C%E9%93%BE%E5%AD%90%E5%92%8C%E7%BB%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title>江湖夜雨十年灯</title>
-      <link>http://xiaker.org/tags/%E6%B1%9F%E6%B9%96%E5%A4%9C%E9%9B%A8%E5%8D%81%E5%B9%B4%E7%81%AF/</link>
+      <link>http://xiaker.net/tags/%E6%B1%9F%E6%B9%96%E5%A4%9C%E9%9B%A8%E5%8D%81%E5%B9%B4%E7%81%AF/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/tags/%E6%B1%9F%E6%B9%96%E5%A4%9C%E9%9B%A8%E5%8D%81%E5%B9%B4%E7%81%AF/</guid>
+      <guid>http://xiaker.net/tags/%E6%B1%9F%E6%B9%96%E5%A4%9C%E9%9B%A8%E5%8D%81%E5%B9%B4%E7%81%AF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>爬宠</title>
-      <link>http://xiaker.org/tags/%E7%88%AC%E5%AE%A0/</link>
+      <link>http://xiaker.net/tags/%E7%88%AC%E5%AE%A0/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/tags/%E7%88%AC%E5%AE%A0/</guid>
+      <guid>http://xiaker.net/tags/%E7%88%AC%E5%AE%A0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>龟</title>
-      <link>http://xiaker.org/tags/%E9%BE%9F/</link>
+      <link>http://xiaker.net/tags/%E9%BE%9F/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://xiaker.org/tags/%E9%BE%9F/</guid>
+      <guid>http://xiaker.net/tags/%E9%BE%9F/</guid>
       <description></description>
     </item>
     
